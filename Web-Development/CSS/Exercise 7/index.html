@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Exercise 7 - Positioning</title>
+
+    <!-- Connect external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 7
+        TOPIC: POSITIONING
+        ============================================================
+
+        CSS POSITIONING controls how an element is placed
+        on the page.
+
+        The main position values are:
+
+        1. static
+        2. relative
+        3. absolute
+        4. fixed
+        5. sticky
+
+
+        ============================================================
+        1. POSITION: STATIC
+        ============================================================
+
+        This is the DEFAULT position.
+
+        Elements stay in the normal document flow.
+
+        Example:
+
+        position: static;
+
+        top, right, bottom, and left generally do not move
+        a statically positioned element.
+
+
+        ============================================================
+        2. POSITION: RELATIVE
+        ============================================================
+
+        The element remains in its NORMAL document flow.
+
+        But it can be visually moved using:
+
+        top
+        right
+        bottom
+        left
+
+        Example:
+
+        position: relative;
+        top: 20px;
+        left: 30px;
+
+        IMPORTANT:
+
+        The element's ORIGINAL SPACE is still reserved.
+
+
+        ============================================================
+        3. POSITION: ABSOLUTE
+        ============================================================
+
+        The element is REMOVED from the normal document flow.
+
+        It is positioned relative to its nearest positioned ancestor.
+
+        A positioned ancestor usually means an ancestor with:
+
+        position: relative;
+        position: absolute;
+        position: fixed;
+        or position: sticky;
+
+        Example:
+
+        .parent {
+            position: relative;
+        }
+
+        .child {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        The child is positioned relative to the parent.
+
+
+        ============================================================
+        4. POSITION: FIXED
+        ============================================================
+
+        The element is positioned relative to the browser viewport.
+
+        It stays in the same viewport position even when
+        the page scrolls.
+
+        Example:
+
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+
+
+        ============================================================
+        5. POSITION: STICKY
+        ============================================================
+
+        A hybrid between normal scrolling and fixed behavior.
+
+        Example:
+
+        position: sticky;
+        top: 0;
+
+        The element scrolls normally at first.
+
+        When it reaches the specified threshold,
+        it sticks.
+
+
+        ============================================================
+        Z-INDEX
+        ============================================================
+
+        z-index controls stacking order.
+
+        Higher z-index generally appears above lower z-index
+        when the elements are in applicable stacking contexts.
+
+        Example:
+
+        z-index: 10;
+
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program and observe:
+
+        - Normal document flow
+        - Relative positioning
+        - Absolute positioning
+        - Fixed positioning
+        - Sticky positioning
+        - z-index
+        ============================================================
+    -->
+
+
+    <h1>CSS Positioning Practice</h1>
+
+
+    <!-- ========================================================
+         1. STATIC
+    ========================================================= -->
+
+    <h2>1. position: static</h2>
+
+    <div class="demo-area">
+
+        <div class="box static-box">
+            Static Box
+        </div>
+
+        <div class="box">
+            Normal Box
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================
+         2. RELATIVE
+    ========================================================= -->
+
+    <h2>2. position: relative</h2>
+
+    <div class="demo-area">
+
+        <div class="box relative-box">
+            Relative Box
+        </div>
+
+        <div class="box">
+            Normal Box
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================
+         3. ABSOLUTE
+    ========================================================= -->
+
+    <h2>3. position: absolute</h2>
+
+    <div class="absolute-parent">
+
+        Parent
+        <div class="box absolute-box">
+            Absolute Box
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================
+         4. Z-INDEX
+    ========================================================= -->
+
+    <h2>4. z-index</h2>
+
+    <div class="zindex-container">
+
+        <div class="overlap-box box-one">
+            Box 1
+        </div>
+
+        <div class="overlap-box box-two">
+            Box 2
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================
+         5. STICKY
+    ========================================================= -->
+
+    <h2>5. position: sticky</h2>
+
+    <div class="sticky-box">
+        I will stick to the top while scrolling
+    </div>
+
+
+    <!-- Extra content so you can scroll -->
+    <div class="scroll-content">
+
+        <p>Scroll down and observe the sticky element.</p>
+        <p>Keep scrolling...</p>
+        <p>Keep scrolling...</p>
+        <p>Keep scrolling...</p>
+        <p>Keep scrolling...</p>
+        <p>Keep scrolling...</p>
+        <p>Keep scrolling...</p>
+        <p>Keep scrolling...</p>
+        <p>Keep scrolling...</p>
+        <p>Keep scrolling...</p>
+
+    </div>
+
+
+    <!-- ========================================================
+         6. FIXED
+    ========================================================= -->
+
+    <div class="fixed-box">
+        I stay here while scrolling
+    </div>
+
+</body>
+</html>

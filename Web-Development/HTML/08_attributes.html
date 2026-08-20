@@ -1,0 +1,631 @@
+<!-- =========================================================
+   SECTION 8: HTML ATTRIBUTES
+   ========================================================= -->
+
+<!--
+QUICK THEORY REVISION
+
+=============================================================
+1. WHAT ARE HTML ATTRIBUTES?
+=============================================================
+
+Attributes provide additional information about
+an HTML element.
+
+They are usually written inside the opening tag.
+
+Example:
+
+<a href="https://example.com">
+    Visit Website
+</a>
+
+Here:
+
+href = attribute name
+
+"https://example.com" = attribute value
+
+
+GENERAL PATTERN:
+
+<tag attribute="value">
+    Content
+</tag>
+
+
+Some attributes do not need a value.
+
+Example:
+
+<input type="text" required>
+
+Here:
+
+required
+
+is a boolean attribute.
+
+Its presence means the field is required.
+
+
+=============================================================
+2. id ATTRIBUTE
+=============================================================
+
+The id attribute gives an element a unique identifier.
+
+Example:
+
+<div id="profile">
+    My Profile
+</div>
+
+IMPORTANT:
+
+An id should normally be UNIQUE on a page.
+
+Correct:
+
+<h1 id="main-heading">Welcome</h1>
+
+Incorrect:
+
+<p id="info">First paragraph</p>
+<p id="info">Second paragraph</p>
+
+The same id should not normally be reused.
+
+
+USES OF id:
+
+- Linking to a section on the same page
+- Connecting <label> to <input>
+- Targeting an element with CSS
+- Selecting an element with JavaScript
+
+
+=============================================================
+3. class ATTRIBUTE
+=============================================================
+
+The class attribute is used to group elements.
+
+Example:
+
+<p class="important">
+    Important information
+</p>
+
+Unlike id, a class CAN be reused.
+
+Example:
+
+<p class="card">First</p>
+
+<p class="card">Second</p>
+
+<p class="card">Third</p>
+
+
+An element can also have multiple classes.
+
+Example:
+
+<div class="card user-card">
+    Profile
+</div>
+
+This element belongs to BOTH classes:
+
+card
+user-card
+
+
+IMPORTANT FOR REACT:
+
+HTML:
+
+class="card"
+
+JSX:
+
+className="card"
+
+
+=============================================================
+4. name ATTRIBUTE
+=============================================================
+
+The name attribute identifies a form field.
+
+Example:
+
+<input
+    type="text"
+    id="username"
+    name="username"
+>
+
+Later, when form data is processed,
+the name helps identify the submitted value.
+
+
+=============================================================
+5. value ATTRIBUTE
+=============================================================
+
+The value attribute provides a value for an element.
+
+Example:
+
+<input
+    type="text"
+    value="Hello"
+>
+
+For inputs, value can be the initial value
+displayed inside the field.
+
+
+=============================================================
+6. required ATTRIBUTE
+=============================================================
+
+Makes a form field mandatory.
+
+Example:
+
+<input
+    type="email"
+    required
+>
+
+If the user tries to submit the form without
+filling this field, the browser performs
+basic validation.
+
+
+=============================================================
+7. placeholder ATTRIBUTE
+=============================================================
+
+Displays hint text inside an empty input.
+
+Example:
+
+<input
+    type="text"
+    placeholder="Enter your full name"
+>
+
+IMPORTANT:
+
+A placeholder is NOT a replacement for a label.
+
+Best practice:
+
+<label for="name">Full Name:</label>
+
+<input
+    type="text"
+    id="name"
+    placeholder="Enter your full name"
+>
+
+
+=============================================================
+8. disabled ATTRIBUTE
+=============================================================
+
+Makes an element unavailable for interaction.
+
+Example:
+
+<input
+    type="text"
+    value="Cannot edit this"
+    disabled
+>
+
+The user cannot click, type, or change it.
+
+
+=============================================================
+9. readonly ATTRIBUTE
+=============================================================
+
+Allows the user to see the value but prevents editing.
+
+Example:
+
+<input
+    type="text"
+    value="India"
+    readonly
+>
+
+KEY DIFFERENCE:
+
+readonly
+= User can see and focus the field,
+  but cannot change its value.
+
+disabled
+= User cannot interact with the field.
+
+
+=============================================================
+10. maxlength ATTRIBUTE
+=============================================================
+
+Limits the maximum number of characters
+a user can enter.
+
+Example:
+
+<input
+    type="text"
+    maxlength="20"
+>
+
+The user cannot enter more than 20 characters.
+
+
+=============================================================
+11. MULTIPLE ATTRIBUTES
+=============================================================
+
+An element can have many attributes.
+
+Example:
+
+<input
+    type="text"
+    id="username"
+    name="username"
+    placeholder="Enter username"
+    maxlength="20"
+    required
+>
+
+
+=============================================================
+IMPORTANT FOR REACT
+=============================================================
+
+HTML attributes are very important because
+React JSX also uses attributes.
+
+Some syntax changes:
+
+HTML:
+class="card"
+
+JSX:
+className="card"
+
+
+HTML:
+for="email"
+
+JSX:
+htmlFor="email"
+
+
+Other attributes such as:
+
+id
+name
+value
+required
+placeholder
+
+are also commonly used in React forms.
+
+=============================================================
+KEY POINTS TO REMEMBER
+=============================================================
+
+id
+= Unique identifier
+
+class
+= Reusable group identifier
+
+name
+= Identifies form data
+
+value
+= Initial/current value
+
+required
+= Must be filled
+
+placeholder
+= Hint text
+
+disabled
+= Cannot interact
+
+readonly
+= Can see but cannot edit
+
+maxlength
+= Limits characters
+=============================================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HTML Attributes Practice</title>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         PAGE INTRODUCTION
+         ===================================================== -->
+
+    <h1 id="main-heading">
+        Learning HTML Attributes
+    </h1>
+
+    <p>
+        This page demonstrates commonly used HTML attributes.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         1. id AND class
+         ===================================================== -->
+
+    <h2>1. id and class</h2>
+
+    <div
+        id="profile"
+        class="card user-card"
+    >
+        <h3>My Profile</h3>
+
+        <p class="description">
+            This element has a unique id and multiple classes.
+        </p>
+    </div>
+
+    <p class="description">
+        This paragraph uses the same "description" class.
+    </p>
+
+    <p class="description">
+        This paragraph also uses the same "description" class.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         2. name AND placeholder
+         ===================================================== -->
+
+    <h2>2. name and placeholder</h2>
+
+    <form>
+
+        <label for="username">
+            Username:
+        </label>
+
+        <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+        >
+
+    </form>
+
+    <hr>
+
+
+    <!-- =====================================================
+         3. required ATTRIBUTE
+         ===================================================== -->
+
+    <h2>3. required</h2>
+
+    <form>
+
+        <label for="email">
+            Email:
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+            Submit
+        </button>
+
+    </form>
+
+    <p>
+        Try clicking Submit without entering an email.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         4. value ATTRIBUTE
+         ===================================================== -->
+
+    <h2>4. value</h2>
+
+    <label for="country">
+        Country:
+    </label>
+
+    <input
+        type="text"
+        id="country"
+        name="country"
+        value="India"
+    >
+
+    <p>
+        The input starts with "India" because of the value attribute.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         5. readonly ATTRIBUTE
+         ===================================================== -->
+
+    <h2>5. readonly</h2>
+
+    <label for="course">
+        Course:
+    </label>
+
+    <input
+        type="text"
+        id="course"
+        name="course"
+        value="Web Development"
+        readonly
+    >
+
+    <p>
+        Try clicking the field and changing its value.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         6. disabled ATTRIBUTE
+         ===================================================== -->
+
+    <h2>6. disabled</h2>
+
+    <label for="status">
+        Registration Status:
+    </label>
+
+    <input
+        type="text"
+        id="status"
+        name="status"
+        value="Registration Closed"
+        disabled
+    >
+
+    <p>
+        Notice that this input cannot be edited or interacted with.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         7. maxlength ATTRIBUTE
+         ===================================================== -->
+
+    <h2>7. maxlength</h2>
+
+    <label for="short-name">
+        Enter a name (maximum 10 characters):
+    </label>
+
+    <input
+        type="text"
+        id="short-name"
+        name="short-name"
+        maxlength="10"
+        placeholder="Maximum 10 characters"
+    >
+
+    <p>
+        Try entering more than 10 characters.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         8. MULTIPLE ATTRIBUTES TOGETHER
+         ===================================================== -->
+
+    <h2>8. Multiple Attributes Together</h2>
+
+    <form>
+
+        <label for="full-name">
+            Full Name:
+        </label>
+
+        <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            value=""
+            placeholder="Enter your full name"
+            maxlength="50"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Submit
+        </button>
+
+    </form>
+
+    <hr>
+
+
+    <!-- =====================================================
+         PRACTICE AREA
+         ===================================================== -->
+
+    <h2>Practice Area</h2>
+
+    <p>Try these experiments yourself:</p>
+
+    <ol>
+        <li>Change the value of the Country input.</li>
+        <li>Remove readonly from the Course field.</li>
+        <li>Remove disabled from the Status field.</li>
+        <li>Change maxlength from 10 to 5.</li>
+        <li>Add the same class to three new paragraphs.</li>
+        <li>Create a new element with your own unique id.</li>
+        <li>Add required to another input field.</li>
+    </ol>
+
+</body>
+
+</html>

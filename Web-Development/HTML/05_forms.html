@@ -1,0 +1,743 @@
+<!-- =========================================================
+   SECTION 5: HTML FORMS
+   ========================================================= -->
+
+<!--
+QUICK THEORY REVISION
+
+=============================================================
+1. WHAT IS A FORM?
+=============================================================
+
+A form is used to collect information from a user.
+
+Examples:
+
+- Login forms
+- Registration forms
+- Contact forms
+- Search forms
+- Checkout forms
+
+The main container is:
+
+<form>
+    Form elements go here
+</form>
+
+
+=============================================================
+2. <label> — DESCRIBES AN INPUT
+=============================================================
+
+A label tells the user what information to enter.
+
+Example:
+
+<label for="name">Name:</label>
+<input type="text" id="name">
+
+IMPORTANT:
+
+The "for" value of the label should match
+the "id" value of the input.
+
+Example:
+
+for="name"
+id="name"
+
+This connects the label to its input.
+
+
+=============================================================
+3. <input>
+=============================================================
+
+<input> is used to collect user input.
+
+Different input types collect different kinds
+of information.
+
+Examples:
+
+type="text"
+type="email"
+type="password"
+type="number"
+type="checkbox"
+type="radio"
+type="date"
+type="file"
+
+
+=============================================================
+4. type="text"
+=============================================================
+
+Used for normal text.
+
+Example:
+
+<input type="text">
+
+Used for:
+
+- Name
+- City
+- Username
+
+
+=============================================================
+5. type="email"
+=============================================================
+
+Used for email addresses.
+
+Example:
+
+<input type="email">
+
+The browser can perform basic email validation.
+
+
+=============================================================
+6. type="password"
+=============================================================
+
+Used for passwords.
+
+Example:
+
+<input type="password">
+
+The characters are hidden while typing.
+
+
+=============================================================
+7. type="number"
+=============================================================
+
+Used for numeric input.
+
+Example:
+
+<input type="number">
+
+Useful for:
+
+- Age
+- Quantity
+- Marks
+
+
+=============================================================
+8. type="checkbox"
+=============================================================
+
+Used when multiple choices can be selected.
+
+Example:
+
+<input type="checkbox">
+
+A user can select more than one checkbox.
+
+
+=============================================================
+9. type="radio"
+=============================================================
+
+Used when only ONE option should be selected
+from a group.
+
+Example:
+
+<input type="radio" name="gender">
+
+IMPORTANT:
+
+Radio buttons in the same group should use
+the SAME name attribute.
+
+Example:
+
+<input type="radio" name="gender" value="male">
+<input type="radio" name="gender" value="female">
+
+Because both use:
+
+name="gender"
+
+only one can be selected.
+
+
+=============================================================
+10. type="date"
+=============================================================
+
+Used for selecting a date.
+
+Example:
+
+<input type="date">
+
+
+=============================================================
+11. type="file"
+=============================================================
+
+Allows the user to select a file.
+
+Example:
+
+<input type="file">
+
+
+=============================================================
+12. <select> AND <option>
+=============================================================
+
+Used to create a dropdown menu.
+
+Example:
+
+<select name="country">
+
+    <option value="india">India</option>
+    <option value="uk">UK</option>
+
+</select>
+
+
+<select>
+= Creates the dropdown
+
+<option>
+= Creates each choice
+
+
+=============================================================
+13. <textarea>
+=============================================================
+
+Used for multi-line text.
+
+Example:
+
+<textarea
+    rows="5"
+    cols="30"
+    placeholder="Enter your message"
+></textarea>
+
+
+=============================================================
+14. <button>
+=============================================================
+
+Creates a clickable button.
+
+For form submission:
+
+<button type="submit">
+    Submit
+</button>
+
+
+=============================================================
+15. IMPORTANT FORM ATTRIBUTES
+=============================================================
+
+required
+- User must fill in the field before submitting.
+
+Example:
+
+<input type="text" required>
+
+
+placeholder
+- Shows hint text inside an empty field.
+
+Example:
+
+<input
+    type="text"
+    placeholder="Enter your name"
+>
+
+
+disabled
+- User cannot interact with the element.
+
+Example:
+
+<input type="text" disabled>
+
+
+readonly
+- User can see the value but cannot edit it.
+
+Example:
+
+<input
+    type="text"
+    value="India"
+    readonly
+>
+
+
+maxlength
+- Limits the maximum number of characters.
+
+Example:
+
+<input
+    type="text"
+    maxlength="20"
+>
+
+
+value
+- Gives an input a value.
+
+Example:
+
+<input
+    type="text"
+    value="Hello"
+>
+
+
+=============================================================
+16. name ATTRIBUTE
+=============================================================
+
+The name attribute identifies the data field.
+
+Example:
+
+<input
+    type="text"
+    id="username"
+    name="username"
+>
+
+Later, when working with forms and React,
+you will use names and values to identify
+and manage form data.
+
+
+=============================================================
+IMPORTANT FOR REACT
+=============================================================
+
+HTML Forms
+        ↓
+User enters data
+        ↓
+React state stores the data
+        ↓
+Validation checks the data
+        ↓
+Submit sends/processes the data
+
+Understanding HTML forms first will make
+React form handling much easier.
+=============================================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Forms Practice</title>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PAGE HEADING
+         ===================================================== -->
+
+    <h1>Student Registration Form</h1>
+
+    <p>
+        This form demonstrates the most important HTML form
+        elements and input types.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         FORM START
+         ===================================================== -->
+
+    <form>
+
+
+        <!-- ===============================================
+             TEXT INPUT
+             =============================================== -->
+
+        <h2>Personal Information</h2>
+
+        <label for="name">Full Name:</label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- ===============================================
+             EMAIL INPUT
+             =============================================== -->
+
+        <label for="email">Email:</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- ===============================================
+             PASSWORD INPUT
+             =============================================== -->
+
+        <label for="password">Password:</label>
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+        >
+
+        <br><br>
+
+
+        <!-- ===============================================
+             NUMBER INPUT
+             =============================================== -->
+
+        <label for="age">Age:</label>
+
+        <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Enter your age"
+        >
+
+        <br><br>
+
+
+        <!-- ===============================================
+             DATE INPUT
+             =============================================== -->
+
+        <label for="dob">Date of Birth:</label>
+
+        <input
+            type="date"
+            id="dob"
+            name="dob"
+        >
+
+        <br><br>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             RADIO BUTTONS
+             =============================================== -->
+
+        <h2>Gender</h2>
+
+        <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+        >
+
+        <label for="female">Female</label>
+
+
+        <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+        >
+
+        <label for="male">Male</label>
+
+
+        <input
+            type="radio"
+            id="other"
+            name="gender"
+            value="other"
+        >
+
+        <label for="other">Other</label>
+
+        <br><br>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             CHECKBOXES
+             =============================================== -->
+
+        <h2>Areas of Interest</h2>
+
+        <input
+            type="checkbox"
+            id="web"
+            name="interest"
+            value="web-development"
+        >
+
+        <label for="web">
+            Web Development
+        </label>
+
+        <br>
+
+
+        <input
+            type="checkbox"
+            id="ai"
+            name="interest"
+            value="artificial-intelligence"
+        >
+
+        <label for="ai">
+            Artificial Intelligence
+        </label>
+
+        <br>
+
+
+        <input
+            type="checkbox"
+            id="ml"
+            name="interest"
+            value="machine-learning"
+        >
+
+        <label for="ml">
+            Machine Learning
+        </label>
+
+        <br>
+
+
+        <input
+            type="checkbox"
+            id="cyber"
+            name="interest"
+            value="cybersecurity"
+        >
+
+        <label for="cyber">
+            Cybersecurity
+        </label>
+
+        <br><br>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             SELECT DROPDOWN
+             =============================================== -->
+
+        <h2>Country</h2>
+
+        <label for="country">
+            Select your country:
+        </label>
+
+        <select
+            id="country"
+            name="country"
+        >
+
+            <option value="">
+                -- Select a Country --
+            </option>
+
+            <option value="india">
+                India
+            </option>
+
+            <option value="uk">
+                United Kingdom
+            </option>
+
+            <option value="usa">
+                United States
+            </option>
+
+            <option value="germany">
+                Germany
+            </option>
+
+        </select>
+
+        <br><br>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             FILE INPUT
+             =============================================== -->
+
+        <h2>Upload File</h2>
+
+        <label for="resume">
+            Upload your resume:
+        </label>
+
+        <input
+            type="file"
+            id="resume"
+            name="resume"
+        >
+
+        <br><br>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             TEXTAREA
+             =============================================== -->
+
+        <h2>Additional Information</h2>
+
+        <label for="message">
+            Tell us about yourself:
+        </label>
+
+        <br>
+
+        <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="40"
+            placeholder="Write something about yourself..."
+            maxlength="300"
+        ></textarea>
+
+        <br><br>
+
+
+        <!-- ===============================================
+             READONLY INPUT
+             =============================================== -->
+
+        <label for="course">
+            Course:
+        </label>
+
+        <input
+            type="text"
+            id="course"
+            name="course"
+            value="Web Development"
+            readonly
+        >
+
+        <br><br>
+
+
+        <!-- ===============================================
+             DISABLED INPUT
+             =============================================== -->
+
+        <label for="status">
+            Registration Status:
+        </label>
+
+        <input
+            type="text"
+            id="status"
+            value="Registration Closed"
+            disabled
+        >
+
+        <br><br>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             TERMS CHECKBOX
+             =============================================== -->
+
+        <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required
+        >
+
+        <label for="terms">
+            I agree to the terms and conditions
+        </label>
+
+        <br><br>
+
+
+        <!-- ===============================================
+             SUBMIT BUTTON
+             =============================================== -->
+
+        <button type="submit">
+            Submit Registration
+        </button>
+
+
+    </form>
+
+    <!-- =====================================================
+         FORM END
+         ===================================================== -->
+
+</body>
+
+</html>

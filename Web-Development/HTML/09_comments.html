@@ -1,0 +1,462 @@
+<!-- =========================================================
+   SECTION 9: HTML COMMENTS
+   ========================================================= -->
+
+<!--
+QUICK THEORY REVISION
+
+=============================================================
+1. WHAT IS AN HTML COMMENT?
+=============================================================
+
+A comment is text written in the HTML code that is
+NOT displayed on the webpage.
+
+Comments are mainly used to:
+
+- Explain code
+- Organize sections
+- Leave notes for yourself or other developers
+- Temporarily hide code during testing
+
+
+=============================================================
+2. COMMENT SYNTAX
+=============================================================
+
+HTML comments start with:
+
+<!--
+
+HTML comments end with:
+
+-->
+
+Example:
+
+<!-- This is an HTML comment -->
+
+
+=============================================================
+3. COMMENTS ARE NOT VISIBLE ON THE PAGE
+=============================================================
+
+Example:
+
+<h1>Hello</h1>
+
+<!-- This message will not appear in the browser -->
+
+<p>Welcome!</p>
+
+The browser displays:
+
+Hello
+
+Welcome!
+
+The comment itself is not visible to the user.
+
+
+=============================================================
+4. MULTI-LINE COMMENTS
+=============================================================
+
+Comments can contain multiple lines.
+
+Example:
+
+<!--
+This is a multi-line comment.
+
+It can explain:
+- A section
+- A feature
+- Important code
+-->
+
+
+=============================================================
+5. COMMENTS FOR ORGANIZING CODE
+=============================================================
+
+Comments are very useful for separating sections.
+
+Example:
+
+<!-- =====================
+     HEADER
+     ===================== -->
+
+<header>
+    <h1>My Website</h1>
+</header>
+
+
+<!-- =====================
+     MAIN CONTENT
+     ===================== -->
+
+<main>
+    <p>Main content here.</p>
+</main>
+
+
+=============================================================
+6. COMMENTING OUT CODE
+=============================================================
+
+You can temporarily hide HTML code by placing
+it inside a comment.
+
+Example:
+
+<!--
+<p>This paragraph is temporarily hidden.</p>
+-->
+
+The paragraph will NOT appear in the browser.
+
+This is useful when testing code.
+
+IMPORTANT:
+
+The code is still present in the HTML file.
+It is just ignored by the browser.
+
+
+=============================================================
+7. COMMENTS DO NOT AFFECT THE WEBPAGE OUTPUT
+=============================================================
+
+These two examples produce the same visible output.
+
+Example 1:
+
+<h1>Hello</h1>
+<p>Welcome</p>
+
+
+Example 2:
+
+<!-- Main heading -->
+<h1>Hello</h1>
+
+<!-- Welcome message -->
+<p>Welcome</p>
+
+Comments help developers understand the code,
+but they do not normally change what users see.
+
+
+=============================================================
+8. GOOD COMMENTS VS BAD COMMENTS
+=============================================================
+
+GOOD:
+
+<!-- Navigation links for moving around the website -->
+
+<nav>
+    ...
+</nav>
+
+
+BAD / UNNECESSARY:
+
+<!-- This is an h1 -->
+
+<h1>Hello</h1>
+
+The code already clearly shows that it is an h1.
+
+GOOD COMMENTS explain:
+
+- WHY something exists
+- The purpose of a section
+- Complex logic or structure
+- Important implementation notes
+
+
+Avoid commenting every obvious line.
+
+
+=============================================================
+9. IMPORTANT FOR REACT
+=============================================================
+
+HTML comments:
+
+<!-- Comment -->
+
+
+React JSX comments are different.
+
+Inside JSX, you will later write:
+
+{/* Comment */}
+
+Example:
+
+function App() {
+    return (
+        <div>
+            {/* This is a JSX comment */}
+            <h1>Hello</h1>
+        </div>
+    );
+}
+
+
+IMPORTANT:
+
+HTML:
+<!-- Comment -->
+
+JSX:
+{/* Comment */}
+
+Do not use HTML comments directly inside JSX.
+
+
+=============================================================
+KEY POINTS TO REMEMBER
+=============================================================
+
+HTML comment:
+
+<!-- Comment -->
+
+Comments:
+
+- Are not displayed on the webpage
+- Help explain code
+- Help organize code
+- Can temporarily hide HTML code
+- Can span multiple lines
+
+HTML comments and JSX comments have different syntax.
+=============================================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Character encoding for the webpage -->
+    <meta charset="UTF-8">
+
+    <!-- Helps the webpage display properly on different screen sizes -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Text displayed in the browser tab -->
+    <title>HTML Comments Practice</title>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         PAGE HEADER
+         ===================================================== -->
+
+    <header>
+
+        <h1>Learning HTML Comments</h1>
+
+        <p>
+            This webpage demonstrates how comments can be used
+            to explain and organize HTML code.
+        </p>
+
+    </header>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         SECTION 1: COMMENTS ARE INVISIBLE
+         ===================================================== -->
+
+    <section>
+
+        <h2>1. Comments Are Not Visible</h2>
+
+        <!--
+        This comment is written in the HTML source code.
+
+        You can see it in VS Code, but you cannot see it
+        as visible text on the webpage.
+        -->
+
+        <p>
+            The paragraph above and this paragraph are visible,
+            but the comment between them is not.
+        </p>
+
+    </section>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         SECTION 2: USING COMMENTS TO ORGANIZE CODE
+         ===================================================== -->
+
+    <section>
+
+        <h2>2. Organizing Code with Comments</h2>
+
+        <!-- Personal Information -->
+
+        <h3>About Me</h3>
+
+        <p>
+            I am learning HTML and building a strong foundation
+            before moving to CSS, JavaScript, and React.
+        </p>
+
+
+        <!-- Learning Goals -->
+
+        <h3>My Goals</h3>
+
+        <ul>
+            <li>Learn HTML</li>
+            <li>Learn CSS</li>
+            <li>Learn JavaScript</li>
+            <li>Learn React</li>
+        </ul>
+
+    </section>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         SECTION 3: COMMENTING OUT CODE
+         ===================================================== -->
+
+    <section>
+
+        <h2>3. Temporarily Hiding Code</h2>
+
+        <p>
+            This paragraph is visible.
+        </p>
+
+
+        <!--
+        <p>
+            This paragraph is hidden because it is inside
+            an HTML comment.
+        </p>
+        -->
+
+
+        <p>
+            This paragraph is also visible.
+        </p>
+
+    </section>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         SECTION 4: PRACTICAL WEBSITE STRUCTURE
+         ===================================================== -->
+
+    <!-- Navigation section -->
+
+    <nav>
+
+        <a href="#about">About</a>
+        |
+        <a href="#projects">Projects</a>
+        |
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <hr>
+
+
+    <!-- Main website content -->
+
+    <main>
+
+
+        <!-- About section -->
+
+        <section id="about">
+
+            <h2>About</h2>
+
+            <p>
+                This section contains information about
+                the purpose of this practice website.
+            </p>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- Projects section -->
+
+        <section id="projects">
+
+            <h2>Projects</h2>
+
+            <p>
+                Later, this section can contain information
+                about HTML, CSS, JavaScript, and React projects.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <hr>
+
+
+    <!-- Footer section -->
+
+    <footer id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            This is the footer section.
+        </p>
+
+        <p>
+            Copyright 2026 - HTML Practice
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================================
+         END OF WEBPAGE
+         ===================================================== -->
+
+
+</body>
+
+</html>

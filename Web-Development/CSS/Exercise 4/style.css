@@ -1,0 +1,211 @@
+/*
+    ============================================================
+    CSS — EXERCISE 4
+    TOPIC: COLORS & UNITS
+    ============================================================
+*/
+
+
+/*
+    ------------------------------------------------------------
+    ROOT FONT SIZE
+    ------------------------------------------------------------
+
+    1rem is based on this value.
+
+    Here:
+
+    1rem = 16px
+*/
+
+html {
+    font-size: 16px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+
+/*
+    ============================================================
+    COMMON COLOR BOX STYLING
+    ============================================================
+*/
+
+.color-box {
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*
+    ============================================================
+    1. NAMED COLOR
+    ============================================================
+*/
+
+.named-color {
+    color: red;
+}
+
+
+/*
+    ============================================================
+    2. HEX COLOR
+    ============================================================
+
+    #0000ff = blue
+*/
+
+.hex-color {
+    color: #0000ff;
+}
+
+
+/*
+    ============================================================
+    3. RGB COLOR
+    ============================================================
+
+    rgb(0, 128, 0) = green
+*/
+
+.rgb-color {
+    color: rgb(0, 128, 0);
+}
+
+
+/*
+    ============================================================
+    4. RGBA COLOR
+    ============================================================
+
+    Alpha:
+
+    1   = fully visible
+    0.5 = partially transparent
+    0   = invisible
+*/
+
+.rgba-background {
+    width: 350px;
+    padding: 20px;
+    background-color: yellow;
+}
+
+.rgba-color {
+    margin-bottom: 0;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+
+/*
+    ============================================================
+    COMMON UNIT BOX STYLING
+    ============================================================
+*/
+
+.unit-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    background-color: lightblue;
+}
+
+
+/*
+    ============================================================
+    1. PX
+    ============================================================
+
+    Fixed width.
+*/
+
+.px-box {
+    width: 300px;
+}
+
+
+/*
+    ============================================================
+    2. PERCENTAGE
+    ============================================================
+
+    The parent has a fixed width.
+
+    The child uses:
+
+    width: 50%;
+
+    Therefore it takes approximately half the parent's
+    available content width.
+*/
+
+.percentage-parent {
+    width: 600px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.percentage-box {
+    width: 50%;
+    background-color: lightgreen;
+}
+
+
+/*
+    ============================================================
+    3. REM
+    ============================================================
+
+    Root font-size:
+
+    1rem = 16px
+
+    Therefore:
+
+    20rem = 20 × 16px = 320px
+*/
+
+.rem-box {
+    width: 20rem;
+    background-color: lightpink;
+}
+
+
+/*
+    ============================================================
+    4. EM
+    ============================================================
+
+    The parent has:
+
+    font-size: 20px;
+
+    The child uses:
+
+    width: 15em;
+
+    So its width is based on the inherited/current font size.
+
+    Approximately:
+
+    15 × 20px = 300px
+*/
+
+.em-parent {
+    font-size: 20px;
+}
+
+.em-box {
+    width: 15em;
+    background-color: lightyellow;
+}

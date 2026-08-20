@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Exercise 4 - Colors and Units</title>
+
+    <!-- Connect external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 4
+        TOPIC: COLORS & UNITS
+        ============================================================
+
+        CSS allows us to define colors in different ways.
+
+        ------------------------------------------------------------
+        1. NAMED COLORS
+        ------------------------------------------------------------
+
+        color: red;
+        color: blue;
+        color: green;
+
+        Simple and easy to read.
+
+        ------------------------------------------------------------
+        2. HEX COLORS
+        ------------------------------------------------------------
+
+        color: #ff0000;
+
+        Format:
+
+        #RRGGBB
+
+        RR → Red amount
+        GG → Green amount
+        BB → Blue amount
+
+        Each value ranges from:
+
+        00 → no color
+        FF → maximum color
+
+        Examples:
+
+        #ff0000 → Red
+        #00ff00 → Green
+        #0000ff → Blue
+        #000000 → Black
+        #ffffff → White
+
+        ------------------------------------------------------------
+        3. RGB COLORS
+        ------------------------------------------------------------
+
+        rgb(red, green, blue)
+
+        Each value ranges from:
+
+        0 to 255
+
+        Example:
+
+        rgb(255, 0, 0) → Red
+        rgb(0, 255, 0) → Green
+        rgb(0, 0, 255) → Blue
+
+        ------------------------------------------------------------
+        4. RGBA COLORS
+        ------------------------------------------------------------
+
+        rgba(red, green, blue, alpha)
+
+        Alpha controls transparency.
+
+        Modern CSS also supports the slash syntax, but here
+        we are practicing the familiar rgba() format.
+
+        Alpha:
+
+        1   → fully visible
+        0.5 → 50% transparent
+        0   → completely transparent
+
+        Example:
+
+        rgba(255, 0, 0, 0.5)
+
+
+        ============================================================
+        CSS UNITS
+        ============================================================
+
+        ------------------------------------------------------------
+        1. px
+        ------------------------------------------------------------
+
+        width: 200px;
+
+        Fixed CSS pixels.
+
+        ------------------------------------------------------------
+        2. %
+        ------------------------------------------------------------
+
+        width: 50%;
+
+        Relative to the width of the parent.
+
+        ------------------------------------------------------------
+        3. rem
+        ------------------------------------------------------------
+
+        Relative to the ROOT (<html>) font-size.
+
+        Usually:
+
+        1rem = 16px
+
+        if the root font-size is 16px.
+
+        Example:
+
+        width: 2rem;
+
+        Usually means:
+
+        2 × 16px = 32px
+
+        ------------------------------------------------------------
+        4. em
+        ------------------------------------------------------------
+
+        Relative to the current element's font-size.
+
+        Example:
+
+        If an element has:
+
+        font-size: 20px;
+
+        Then:
+
+        width: 2em;
+
+        means:
+
+        2 × 20px = 40px
+
+        IMPORTANT:
+
+        rem → relative to ROOT font-size
+        em  → relative to CURRENT element's font-size
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program and compare:
+
+        - Named colors
+        - Hex colors
+        - RGB colors
+        - RGBA transparency
+        - px
+        - %
+        - rem
+        - em
+        ============================================================
+    -->
+
+    <h1>CSS Colors and Units Practice</h1>
+
+
+    <!-- ========================================================
+         COLORS
+    ========================================================= -->
+
+    <h2>1. Named Color</h2>
+
+    <div class="color-box named-color">
+        color: red;
+    </div>
+
+
+    <h2>2. Hex Color</h2>
+
+    <div class="color-box hex-color">
+        color: #0000ff;
+    </div>
+
+
+    <h2>3. RGB Color</h2>
+
+    <div class="color-box rgb-color">
+        color: rgb(0, 128, 0);
+    </div>
+
+
+    <h2>4. RGBA Color</h2>
+
+    <div class="rgba-background">
+        <div class="color-box rgba-color">
+            rgba with transparency
+        </div>
+    </div>
+
+
+    <!-- ========================================================
+         UNITS
+    ========================================================= -->
+
+    <h2>5. Pixels - px</h2>
+
+    <div class="unit-box px-box">
+        width: 300px
+    </div>
+
+
+    <h2>6. Percentage - %</h2>
+
+    <!-- Parent container -->
+    <div class="percentage-parent">
+
+        <div class="unit-box percentage-box">
+            width: 50%
+        </div>
+
+    </div>
+
+
+    <h2>7. rem Unit</h2>
+
+    <div class="unit-box rem-box">
+        width: 20rem
+    </div>
+
+
+    <h2>8. em Unit</h2>
+
+    <div class="em-parent">
+
+        <div class="unit-box em-box">
+            width: 15em
+        </div>
+
+    </div>
+
+</body>
+</html>

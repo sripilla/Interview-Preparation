@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Exercise 8 - Display Property</title>
+
+    <!-- Connect external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 8
+        TOPIC: DISPLAY PROPERTY
+        ============================================================
+
+        The display property controls HOW an element behaves
+        in the page layout.
+
+        Important values:
+
+        1. block
+        2. inline
+        3. inline-block
+        4. none
+        5. flex
+
+
+        ============================================================
+        1. DISPLAY: BLOCK
+        ============================================================
+
+        Block elements generally:
+
+        - Start on a new line
+        - Take available horizontal space by default
+        - Can have width and height
+
+        Common examples:
+
+        div
+        p
+        h1
+
+
+        Example:
+
+        display: block;
+
+
+        ============================================================
+        2. DISPLAY: INLINE
+        ============================================================
+
+        Inline elements:
+
+        - Stay in the same line
+        - Take only the space needed by their content
+        - width and height generally do not control layout
+          in the same way as block elements
+
+        Common examples:
+
+        span
+        a
+
+
+        Example:
+
+        display: inline;
+
+
+        ============================================================
+        3. DISPLAY: INLINE-BLOCK
+        ============================================================
+
+        Inline-block elements:
+
+        - Stay next to other inline/inline-block elements
+        - Can have width and height
+
+        Think:
+
+        inline + block features
+
+
+        ============================================================
+        4. DISPLAY: NONE
+        ============================================================
+
+        Completely removes the element from the layout.
+
+        No visible element.
+        No space reserved.
+
+
+        ============================================================
+        5. DISPLAY: FLEX
+        ============================================================
+
+        Makes an element a FLEX CONTAINER.
+
+        Its direct children become flex items.
+
+        Example:
+
+        display: flex;
+
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program and compare:
+
+        - block
+        - inline
+        - inline-block
+        - none
+        - flex
+        ============================================================
+    -->
+
+
+    <h1>CSS Display Property Practice</h1>
+
+
+    <!-- ========================================================
+         1. BLOCK
+    ========================================================= -->
+
+    <h2>1. display: block</h2>
+
+    <div class="display-area">
+
+        <span class="block-element">
+            First Element
+        </span>
+
+        <span class="block-element">
+            Second Element
+        </span>
+
+        <span class="block-element">
+            Third Element
+        </span>
+
+    </div>
+
+
+    <!-- ========================================================
+         2. INLINE
+    ========================================================= -->
+
+    <h2>2. display: inline</h2>
+
+    <div class="display-area">
+
+        <div class="inline-element">
+            First Element
+        </div>
+
+        <div class="inline-element">
+            Second Element
+        </div>
+
+        <div class="inline-element">
+            Third Element
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================
+         3. INLINE-BLOCK
+    ========================================================= -->
+
+    <h2>3. display: inline-block</h2>
+
+    <div class="display-area">
+
+        <div class="inline-block-element">
+            First
+        </div>
+
+        <div class="inline-block-element">
+            Second
+        </div>
+
+        <div class="inline-block-element">
+            Third
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================
+         4. DISPLAY: NONE
+    ========================================================= -->
+
+    <h2>4. display: none</h2>
+
+    <div class="display-area">
+
+        <div class="normal-element">
+            First Element
+        </div>
+
+        <div class="hidden-element">
+            You should NOT see me
+        </div>
+
+        <div class="normal-element">
+            Third Element
+        </div>
+
+    </div>
+
+
+    <!-- ========================================================
+         5. DISPLAY: FLEX
+    ========================================================= -->
+
+    <h2>5. display: flex</h2>
+
+    <div class="flex-container">
+
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+
+    </div>
+
+</body>
+</html>

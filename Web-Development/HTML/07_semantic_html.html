@@ -1,0 +1,498 @@
+<!-- =========================================================
+   SECTION 7: SEMANTIC HTML5 TAGS
+   ========================================================= -->
+
+<!--
+QUICK THEORY REVISION
+
+=============================================================
+1. WHAT IS SEMANTIC HTML?
+=============================================================
+
+Semantic HTML means using HTML tags that describe
+the MEANING and PURPOSE of the content.
+
+For example:
+
+<div>
+    Navigation links
+</div>
+
+This does not tell us what the content represents.
+
+Instead:
+
+<nav>
+    Navigation links
+</nav>
+
+The <nav> tag clearly tells the browser, developers,
+and assistive technologies that this section contains
+navigation.
+
+Semantic tags make HTML easier to understand.
+
+
+=============================================================
+2. WHY USE SEMANTIC HTML?
+=============================================================
+
+Semantic HTML improves:
+
+1. READABILITY
+   - Developers can understand the structure easily.
+
+2. ACCESSIBILITY
+   - Screen readers can better understand page sections.
+
+3. SEO
+   - Search engines can better understand the page structure.
+
+4. MAINTAINABILITY
+   - Code is easier to organize and maintain.
+
+
+=============================================================
+3. <header>
+=============================================================
+
+Represents introductory content for a page or section.
+
+Often contains:
+
+- Website logo
+- Website name
+- Main heading
+- Introductory content
+
+Example:
+
+<header>
+    <h1>My Website</h1>
+</header>
+
+
+=============================================================
+4. <nav>
+=============================================================
+
+Represents a section containing navigation links.
+
+Example:
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+=============================================================
+5. <main>
+=============================================================
+
+Represents the MAIN content of the webpage.
+
+Example:
+
+<main>
+    <h2>Main Content</h2>
+    <p>This is the primary content.</p>
+</main>
+
+IMPORTANT:
+
+A page normally has one main <main> element.
+
+
+=============================================================
+6. <section>
+=============================================================
+
+Groups related content around a particular topic.
+
+Example:
+
+<section>
+    <h2>About Me</h2>
+    <p>Information about me.</p>
+</section>
+
+Use <section> when the content belongs together
+thematically.
+
+
+=============================================================
+7. <article>
+=============================================================
+
+Represents self-contained content that could make
+sense independently.
+
+Examples:
+
+- Blog post
+- News article
+- Forum post
+- Product review
+- Individual content card
+
+Example:
+
+<article>
+    <h2>Learning HTML</h2>
+    <p>HTML is the foundation of web development.</p>
+</article>
+
+
+=============================================================
+8. <aside>
+=============================================================
+
+Represents content indirectly related to the main content.
+
+Often used for:
+
+- Sidebar
+- Related links
+- Related articles
+- Advertisements
+- Extra information
+
+Example:
+
+<aside>
+    <h3>Related Topics</h3>
+    <p>Learn CSS next.</p>
+</aside>
+
+
+=============================================================
+9. <footer>
+=============================================================
+
+Represents the bottom section of a page or section.
+
+Often contains:
+
+- Copyright information
+- Contact links
+- Privacy links
+- Other supporting links
+
+Example:
+
+<footer>
+    <p>Copyright 2026 My Website</p>
+</footer>
+
+
+=============================================================
+10. <div> VS SEMANTIC TAGS
+=============================================================
+
+<div>
+= Generic container
+= Does not describe its content
+
+Semantic tags:
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+
+= Describe the purpose of their content.
+
+
+BAD / LESS MEANINGFUL:
+
+<div>
+    <div>Website Header</div>
+    <div>Navigation</div>
+    <div>Main Content</div>
+    <div>Footer</div>
+</div>
+
+
+BETTER:
+
+<header>Website Header</header>
+
+<nav>Navigation</nav>
+
+<main>Main Content</main>
+
+<footer>Footer</footer>
+
+
+=============================================================
+IMPORTANT FOR REACT
+=============================================================
+
+In React, you will build components using JSX.
+
+Instead of creating many generic <div> elements,
+you should use meaningful semantic HTML when appropriate.
+
+Example:
+
+function Header() {
+    return (
+        <header>
+            <h1>My Website</h1>
+        </header>
+    );
+}
+
+Semantic HTML is commonly expected in clean,
+professional React applications.
+=============================================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Semantic HTML Practice</title>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+         
+         Contains introductory information about the website.
+         ===================================================== -->
+
+    <header>
+
+        <h1>My Web Development Journey</h1>
+
+        <p>
+            Learning HTML first and building a strong
+            foundation before moving to React.
+        </p>
+
+    </header>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         
+         Contains links for navigating around the page.
+         ===================================================== -->
+
+    <nav>
+
+        <a href="#about">About</a>
+
+        |
+
+        <a href="#learning">Learning</a>
+
+        |
+
+        <a href="#articles">Articles</a>
+
+        |
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         MAIN
+
+         Contains the primary content of the webpage.
+         Normally, a page has one <main> element.
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- ===============================================
+             SECTION: ABOUT
+             =============================================== -->
+
+        <section id="about">
+
+            <h2>About This Website</h2>
+
+            <p>
+                This website is a practice project created
+                while learning the fundamentals of HTML.
+            </p>
+
+            <p>
+                The goal is to understand HTML structure,
+                forms, tables, links, and semantic elements
+                before learning CSS, JavaScript, and React.
+            </p>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             SECTION: LEARNING
+             =============================================== -->
+
+        <section id="learning">
+
+            <h2>My Learning Path</h2>
+
+            <ol>
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+                <li>JavaScript</li>
+
+                <li>React</li>
+
+            </ol>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             SECTION: ARTICLES
+             =============================================== -->
+
+        <section id="articles">
+
+            <h2>Latest Learning Articles</h2>
+
+
+            <!-- ARTICLE 1
+                 
+                 This is self-contained content.
+                 It could make sense independently.
+                 =========================================== -->
+
+            <article>
+
+                <h3>Why HTML Is Important</h3>
+
+                <p>
+                    HTML provides the structure and meaning
+                    of a webpage.
+                </p>
+
+                <p>
+                    CSS will later control how the webpage
+                    looks, while JavaScript will add behaviour.
+                </p>
+
+            </article>
+
+
+            <hr>
+
+
+            <!-- ARTICLE 2
+                 =========================================== -->
+
+            <article>
+
+                <h3>Preparing for React</h3>
+
+                <p>
+                    React uses JSX, which looks similar to HTML.
+                </p>
+
+                <p>
+                    Understanding HTML structure makes it easier
+                    to understand JSX and React components.
+                </p>
+
+            </article>
+
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- ===============================================
+             ASIDE
+
+             Contains related but secondary information.
+             =============================================== -->
+
+        <aside>
+
+            <h2>Related Topics</h2>
+
+            <ul>
+
+                <li>Learn CSS</li>
+
+                <li>Learn JavaScript</li>
+
+                <li>Understand JSX</li>
+
+                <li>Build React Components</li>
+
+            </ul>
+
+        </aside>
+
+
+    </main>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            This is the footer section of the webpage.
+        </p>
+
+        <p>
+            Copyright 2026 - My Web Development Practice
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

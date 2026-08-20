@@ -1,0 +1,166 @@
+/*
+    ============================================================
+    CSS — EXERCISE 6
+    TOPIC: CSS GRID
+    ============================================================
+*/
+
+
+/*
+    Basic page styling
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+
+/*
+    ============================================================
+    COMMON GRID CONTAINER
+    ============================================================
+
+    display: grid;
+
+    makes this a grid container.
+
+    Its direct children become grid items.
+*/
+
+.grid-container {
+    display: grid;
+
+    width: 700px;
+    margin-bottom: 40px;
+
+    padding: 20px;
+    border: 3px solid black;
+
+    background-color: lightgray;
+}
+
+
+/*
+    ============================================================
+    COMMON GRID ITEM
+    ============================================================
+*/
+
+.grid-item {
+    padding: 25px;
+
+    border: 2px solid black;
+    background-color: lightblue;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*
+    ============================================================
+    1. THREE EQUAL COLUMNS
+    ============================================================
+
+    Creates:
+
+    Column 1 | Column 2 | Column 3
+
+    Each column gets:
+
+    1 fraction of available space.
+
+    Total:
+
+    1fr + 1fr + 1fr = 3 equal parts
+*/
+
+.three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+
+/*
+    ============================================================
+    2. TWO EQUAL COLUMNS
+    ============================================================
+
+    Total available space is divided into 2 equal parts.
+*/
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+/*
+    ============================================================
+    3. DIFFERENT COLUMN SIZES
+    ============================================================
+
+    1fr 2fr means:
+
+    Total = 3 parts
+
+    First column  = 1 part
+    Second column = 2 parts
+
+    Example:
+
+    [ Sidebar ][       Main Content       ]
+*/
+
+.different-columns {
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+
+/*
+    ============================================================
+    4. EXPLICIT ROWS AND COLUMNS
+    ============================================================
+
+    Creates:
+
+    3 columns
+    2 rows
+
+    Columns:
+
+    1fr | 1fr | 1fr
+
+    Rows:
+
+    auto
+    auto
+*/
+
+.rows-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+
+    gap: 10px;
+}
+
+
+/*
+    ============================================================
+    5. LARGE GAP
+    ============================================================
+
+    gap controls BOTH:
+
+    - row-gap
+    - column-gap
+*/
+
+.large-gap {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    background-color: lightyellow;
+}

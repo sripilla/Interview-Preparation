@@ -1,0 +1,119 @@
+/*
+    ============================================================
+    CSS — EXERCISE 2
+    TOPIC: SELECTORS
+    ============================================================
+*/
+
+
+/* ------------------------------------------------------------
+   1. ELEMENT / TAG SELECTOR
+
+   Targets ALL <p> elements.
+------------------------------------------------------------ */
+
+p {
+    color: blue;
+}
+
+
+/* ------------------------------------------------------------
+   2. CLASS SELECTOR
+
+   Targets EVERY element with class="highlight".
+------------------------------------------------------------ */
+
+.highlight {
+    background-color: lightyellow;
+    color: red;
+    padding: 10px;
+}
+
+
+/* ------------------------------------------------------------
+   3. ID SELECTOR
+
+   Targets the element with id="main-title".
+------------------------------------------------------------ */
+
+#main-title {
+    color: green;
+}
+
+
+/* ------------------------------------------------------------
+   4. DESCENDANT SELECTOR
+
+   Targets ALL <p> elements anywhere inside .container.
+
+   This includes:
+   - Direct children
+   - Nested children
+------------------------------------------------------------ */
+
+.container p {
+    background-color: lightblue;
+}
+
+
+/* ------------------------------------------------------------
+   5. CHILD SELECTOR
+
+   Targets ONLY <p> elements that are direct children
+   of .parent.
+------------------------------------------------------------ */
+
+.parent > p {
+    color: orange;
+    font-weight: bold;
+}
+
+
+/* ------------------------------------------------------------
+   6. HOVER PSEUDO-CLASS
+
+   Style changes when the mouse moves over the button.
+------------------------------------------------------------ */
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+
+/* ------------------------------------------------------------
+   7. FIRST-CHILD PSEUDO-CLASS
+
+   Targets the first <li> inside its parent.
+------------------------------------------------------------ */
+
+li:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* ------------------------------------------------------------
+   8. SPECIFICITY
+
+   All three rules can target the same element:
+
+   p           → lowest specificity
+   .special    → higher specificity
+   #unique     → highest specificity
+
+   Therefore, #unique wins for the color property.
+------------------------------------------------------------ */
+
+.special {
+    color: green;
+}
+
+#unique {
+    color: red;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Exercise 3 - Box Model</title>
+
+    <!-- Connect external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 3
+        TOPIC: THE BOX MODEL
+        ============================================================
+
+        Every HTML element is treated like a BOX.
+
+        The box model has 4 layers:
+
+                    MARGIN
+              ┌─────────────────┐
+              │     BORDER      │
+              │  ┌───────────┐  │
+              │  │  PADDING  │  │
+              │  │ ┌───────┐ │  │
+              │  │ │CONTENT│ │  │
+              │  │ └───────┘ │  │
+              │  └───────────┘  │
+              └─────────────────┘
+
+
+        ORDER FROM INSIDE → OUTSIDE:
+
+        CONTENT → PADDING → BORDER → MARGIN
+
+
+        ------------------------------------------------------------
+        1. CONTENT
+        ------------------------------------------------------------
+
+        The actual text, image, or other content inside an element.
+
+        width and height normally control the CONTENT area.
+
+        Example:
+
+        width: 200px;
+        height: 100px;
+
+
+        ------------------------------------------------------------
+        2. PADDING
+        ------------------------------------------------------------
+
+        Space INSIDE the border.
+
+        It creates space between the CONTENT and BORDER.
+
+        Example:
+
+        padding: 20px;
+
+
+        ------------------------------------------------------------
+        3. BORDER
+        ------------------------------------------------------------
+
+        Surrounds the padding and content.
+
+        Example:
+
+        border: 5px solid black;
+
+
+        ------------------------------------------------------------
+        4. MARGIN
+        ------------------------------------------------------------
+
+        Space OUTSIDE the border.
+
+        It creates space between this element and other elements.
+
+        Example:
+
+        margin: 30px;
+
+
+        ============================================================
+        BOX-SIZING
+        ============================================================
+
+        By default, CSS uses:
+
+        box-sizing: content-box;
+
+        This means:
+
+        width = ONLY the content width
+
+        So if:
+
+        width: 200px;
+        padding: 20px;
+        border: 5px;
+
+        Actual total width becomes:
+
+        200 + 20 + 20 + 5 + 5 = 250px
+
+
+        Recommended approach:
+
+        box-sizing: border-box;
+
+        This means the declared width includes:
+
+        CONTENT + PADDING + BORDER
+
+        So:
+
+        width: 200px;
+
+        Total width stays approximately 200px.
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program and visually understand:
+
+        - Content
+        - Padding
+        - Border
+        - Margin
+        - content-box
+        - border-box
+        ============================================================
+    -->
+
+    <h1>CSS Box Model Practice</h1>
+
+
+    <!-- BOX 1: DEFAULT content-box -->
+    <h2>1. Default: content-box</h2>
+
+    <div class="box content-box">
+        <strong>Content Box</strong>
+
+        <p>
+            This box uses the default box-sizing:
+            content-box.
+        </p>
+
+        <p>
+            Width only controls the content area.
+            Padding and border are added outside it.
+        </p>
+    </div>
+
+
+    <!-- BOX 2: border-box -->
+    <h2>2. Recommended: border-box</h2>
+
+    <div class="box border-box">
+        <strong>Border Box</strong>
+
+        <p>
+            This box uses:
+            box-sizing: border-box.
+        </p>
+
+        <p>
+            Width includes content, padding,
+            and border.
+        </p>
+    </div>
+
+
+    <!-- MARGIN DEMONSTRATION -->
+    <h2>3. Margin Demonstration</h2>
+
+    <div class="margin-box box-one">
+        Box One
+    </div>
+
+    <div class="margin-box box-two">
+        Box Two
+    </div>
+
+</body>
+</html>

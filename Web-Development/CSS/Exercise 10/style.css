@@ -1,0 +1,196 @@
+/*
+    ============================================================
+    CSS — EXERCISE 10
+    TOPIC: RESPONSIVE DESIGN & MEDIA QUERIES
+    ============================================================
+*/
+
+
+/*
+    ============================================================
+    BASIC RESET / BOX SIZING
+    ============================================================
+
+    border-box makes width calculations easier.
+
+    The declared width includes:
+
+    content + padding + border
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/*
+    ============================================================
+    DESKTOP / DEFAULT STYLES
+    ============================================================
+
+    These styles apply normally.
+
+    In this exercise, we start with a larger-screen layout.
+*/
+
+
+.header {
+    padding: 20px 40px;
+
+    background-color: lightblue;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header h1 {
+    margin: 0;
+}
+
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/*
+    ============================================================
+    HERO SECTION
+    ============================================================
+*/
+
+.hero {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: lightyellow;
+}
+
+
+.hero h2 {
+    font-size: 40px;
+}
+
+
+/*
+    ============================================================
+    CARD LAYOUT
+    ============================================================
+
+    On larger screens:
+
+    3 cards appear in a row.
+*/
+
+.card-container {
+    display: flex;
+    gap: 20px;
+
+    padding: 40px;
+}
+
+
+.card {
+    flex: 1;
+
+    padding: 25px;
+
+    border: 2px solid black;
+    background-color: lightgray;
+}
+
+
+/*
+    ============================================================
+    MEDIA QUERY
+    ============================================================
+
+    These styles apply ONLY when:
+
+    screen width <= 768px
+
+    @media (max-width: 768px)
+*/
+
+@media (max-width: 768px) {
+
+    /*
+        HEADER
+
+        Change from:
+
+        Row
+
+        to:
+
+        Column
+    */
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+
+    /*
+        NAVIGATION
+
+        Reduce gap so it fits better.
+    */
+
+    .navbar {
+        gap: 10px;
+    }
+
+
+    /*
+        HERO
+
+        Reduce padding and font size.
+    */
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+
+    /*
+        CARDS
+
+        Change from:
+
+        Row
+
+        to:
+
+        Column
+    */
+
+    .card-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+}

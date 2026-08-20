@@ -1,0 +1,120 @@
+/*
+    ============================================================
+    CSS — EXERCISE 3
+    TOPIC: THE BOX MODEL
+    ============================================================
+*/
+
+
+/*
+    Basic styling for the page
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+
+/*
+    ============================================================
+    1. COMMON BOX STYLING
+    ============================================================
+
+    Both boxes have the SAME:
+
+    width
+    padding
+    border
+    margin
+
+    The difference is only box-sizing.
+*/
+
+.box {
+    width: 300px;
+    padding: 30px;
+    border: 10px solid black;
+    margin: 30px 0;
+
+    background-color: lightblue;
+}
+
+
+/*
+    ============================================================
+    2. DEFAULT: content-box
+    ============================================================
+
+    The width of 300px applies ONLY to the content.
+
+    Total width becomes:
+
+    CONTENT = 300px
+
+    LEFT + RIGHT PADDING
+    = 30px + 30px
+    = 60px
+
+    LEFT + RIGHT BORDER
+    = 10px + 10px
+    = 20px
+
+    TOTAL:
+
+    300 + 60 + 20 = 380px
+*/
+
+.content-box {
+    box-sizing: content-box;
+}
+
+
+/*
+    ============================================================
+    3. border-box
+    ============================================================
+
+    The width of 300px includes:
+
+    CONTENT + PADDING + BORDER
+
+    Therefore, the total box width remains 300px.
+*/
+
+.border-box {
+    box-sizing: border-box;
+
+    background-color: lightgreen;
+}
+
+
+/*
+    ============================================================
+    4. MARGIN DEMONSTRATION
+    ============================================================
+
+    Margin creates space OUTSIDE an element.
+
+    Both boxes have a margin at the bottom.
+
+    Observe the space between Box One and Box Two.
+*/
+
+.margin-box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    margin-bottom: 40px;
+
+    background-color: lightyellow;
+}
+
+
+/*
+    Different background so the two boxes are easy to identify.
+*/
+
+.box-two {
+    background-color: lightpink;
+}

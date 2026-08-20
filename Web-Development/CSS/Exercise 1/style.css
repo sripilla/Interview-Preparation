@@ -1,0 +1,25 @@
+/*
+    ============================================================
+    CSS — EXERCISE 1
+    EXTERNAL CSS FILE
+    ============================================================
+
+    This file is connected to index.html using:
+
+    <link rel="stylesheet" href="style.css">
+
+    The selector below targets every element that has:
+
+    class="external-text"
+
+    CSS syntax:
+
+    selector {
+        property: value;
+    }
+*/
+
+.external-text {
+    color: green;
+    font-size: 24px;
+}

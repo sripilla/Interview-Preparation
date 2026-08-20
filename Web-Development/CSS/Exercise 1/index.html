@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Exercise 1</title>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 1
+        TOPIC: HOW TO APPLY CSS + BASIC CSS SYNTAX
+        ============================================================
+
+        CSS = Cascading Style Sheets
+
+        CSS is used to control how HTML elements look.
+
+        There are 3 main ways to apply CSS:
+
+        1. INLINE CSS
+           - Written directly inside an HTML element.
+           - Example:
+             <p style="color: red;">Hello</p>
+           - Usually avoided in real projects because it mixes
+             HTML structure and styling.
+
+        2. INTERNAL CSS
+           - Written inside a <style> tag.
+           - The <style> tag is usually placed inside <head>.
+           - Useful for small examples.
+
+        3. EXTERNAL CSS
+           - CSS is written in a separate .css file.
+           - HTML connects to it using:
+             <link rel="stylesheet" href="style.css">
+           - This is the most common approach in real projects.
+
+        ============================================================
+        BASIC CSS SYNTAX
+        ============================================================
+
+        selector {
+            property: value;
+        }
+
+        Example:
+
+        p {
+            color: blue;
+            font-size: 20px;
+        }
+
+        SELECTOR → chooses which HTML element to style
+        PROPERTY → what you want to change
+        VALUE    → the new style value
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program and observe the difference between:
+        - Inline CSS
+        - Internal CSS
+        - External CSS
+    -->
+
+    <!-- INTERNAL CSS -->
+    <style>
+        .internal-text {
+            color: blue;
+            font-size: 24px;
+        }
+    </style>
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>CSS Exercise 1</h1>
+
+    <!-- INLINE CSS -->
+    <p style="color: red; font-size: 24px;">
+        This text uses Inline CSS.
+    </p>
+
+    <!-- INTERNAL CSS -->
+    <p class="internal-text">
+        This text uses Internal CSS.
+    </p>
+
+    <!-- EXTERNAL CSS -->
+    <p class="external-text">
+        This text uses External CSS.
+    </p>
+
+</body>
+</html>

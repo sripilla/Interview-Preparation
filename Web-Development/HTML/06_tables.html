@@ -1,0 +1,488 @@
+<!-- =========================================================
+   SECTION 6: HTML TABLES
+   ========================================================= -->
+
+<!--
+QUICK THEORY REVISION
+
+=============================================================
+1. WHAT IS AN HTML TABLE?
+=============================================================
+
+An HTML table is used to display structured data
+in rows and columns.
+
+Example:
+
+Name       Age       Course
+Alice      21        AI/ML
+Bob        22        CSE
+
+
+MAIN TABLE TAGS:
+
+<table>  = Creates the table
+<tr>     = Creates a table row
+<th>     = Creates a header cell
+<td>     = Creates a normal data cell
+
+
+=============================================================
+2. <table>
+=============================================================
+
+The <table> tag is the main container.
+
+Example:
+
+<table>
+
+    Table content goes here.
+
+</table>
+
+
+=============================================================
+3. <tr> — TABLE ROW
+=============================================================
+
+<tr> creates one horizontal row.
+
+Example:
+
+<tr>
+    <td>Alice</td>
+    <td>21</td>
+</tr>
+
+
+Each <tr> represents one row in the table.
+
+
+=============================================================
+4. <th> — TABLE HEADER CELL
+=============================================================
+
+<th> is used for headings.
+
+Example:
+
+<tr>
+    <th>Name</th>
+    <th>Age</th>
+</tr>
+
+Browsers normally display <th> content
+bold and centered.
+
+
+=============================================================
+5. <td> — TABLE DATA CELL
+=============================================================
+
+<td> is used for normal data.
+
+Example:
+
+<tr>
+    <td>Alice</td>
+    <td>21</td>
+</tr>
+
+
+=============================================================
+6. <thead>
+=============================================================
+
+<thead> groups the header section
+of a table.
+
+Example:
+
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+</thead>
+
+
+Usually contains table headings.
+
+
+=============================================================
+7. <tbody>
+=============================================================
+
+<tbody> groups the main data rows.
+
+Example:
+
+<tbody>
+
+    <tr>
+        <td>Alice</td>
+        <td>21</td>
+    </tr>
+
+</tbody>
+
+
+=============================================================
+8. TABLE STRUCTURE
+=============================================================
+
+A typical table looks like:
+
+<table>
+
+    <thead>
+
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+
+=============================================================
+9. IMPORTANT RELATIONSHIP
+=============================================================
+
+<table>
+    |
+    |-- <thead>
+    |       |
+    |       |-- <tr>
+    |               |
+    |               |-- <th>
+    |
+    |-- <tbody>
+            |
+            |-- <tr>
+                    |
+                    |-- <td>
+
+
+=============================================================
+10. WHEN SHOULD YOU USE TABLES?
+=============================================================
+
+Use tables for structured data such as:
+
+- Student information
+- Marks
+- Product data
+- Employee information
+- Schedules
+- Learning progress
+
+DO NOT use tables just to create webpage layouts.
+
+For page layouts, later use:
+
+- Semantic HTML
+- CSS Flexbox
+- CSS Grid
+
+
+=============================================================
+KEY POINTS TO REMEMBER
+=============================================================
+
+<table>
+= Main table container
+
+<tr>
+= Table Row
+
+<th>
+= Table Header
+
+<td>
+= Table Data
+
+<thead>
+= Groups the header section
+
+<tbody>
+= Groups the main data section
+=============================================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HTML Tables</title>
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PAGE INTRODUCTION
+         ===================================================== -->
+
+    <h1>Learning HTML Tables</h1>
+
+    <p>
+        This page demonstrates how to display structured
+        information using rows and columns.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         TABLE 1: STUDENT INFORMATION
+         ===================================================== -->
+
+    <h2>1. Student Information</h2>
+
+    <table>
+
+        <!-- TABLE HEADER -->
+
+        <thead>
+
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+            </tr>
+
+        </thead>
+
+
+        <!-- TABLE BODY -->
+
+        <tbody>
+
+            <tr>
+                <td>Alice</td>
+                <td>21</td>
+                <td>AI/ML</td>
+            </tr>
+
+            <tr>
+                <td>Bob</td>
+                <td>22</td>
+                <td>Computer Science</td>
+            </tr>
+
+            <tr>
+                <td>Charlie</td>
+                <td>20</td>
+                <td>Data Science</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         TABLE 2: WEB DEVELOPMENT LEARNING TRACKER
+         ===================================================== -->
+
+    <h2>2. Web Development Learning Tracker</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Technology</th>
+                <th>Status</th>
+                <th>Level</th>
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <tr>
+                <td>HTML</td>
+                <td>Learning</td>
+                <td>Beginner</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>Planned</td>
+                <td>Beginner</td>
+            </tr>
+
+            <tr>
+                <td>JavaScript</td>
+                <td>Planned</td>
+                <td>Beginner</td>
+            </tr>
+
+            <tr>
+                <td>React</td>
+                <td>Planned</td>
+                <td>Beginner</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         TABLE 3: STUDENT MARKS
+         ===================================================== -->
+
+    <h2>3. Student Marks</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Subject</th>
+                <th>Maximum Marks</th>
+                <th>Marks Obtained</th>
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <tr>
+                <td>Mathematics</td>
+                <td>100</td>
+                <td>85</td>
+            </tr>
+
+            <tr>
+                <td>Programming</td>
+                <td>100</td>
+                <td>90</td>
+            </tr>
+
+            <tr>
+                <td>Machine Learning</td>
+                <td>100</td>
+                <td>88</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         TABLE 4: YOUR LEARNING PLAN
+         ===================================================== -->
+
+    <h2>4. My Learning Plan</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Step</th>
+                <th>Topic</th>
+                <th>Current Status</th>
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>HTML</td>
+                <td>Completed / Learning</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>CSS</td>
+                <td>Next</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>JavaScript</td>
+                <td>Planned</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>React</td>
+                <td>Planned</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         PRACTICE AREA
+         ===================================================== -->
+
+    <h2>Practice Area</h2>
+
+    <p>Try these experiments yourself:</p>
+
+    <ol>
+
+        <li>Add another student to the first table.</li>
+
+        <li>Add another technology to the learning tracker.</li>
+
+        <li>Change a table heading.</li>
+
+        <li>Add a new column to one table.</li>
+
+        <li>Create your own table from scratch.</li>
+
+    </ol>
+
+
+</body>
+
+</html>

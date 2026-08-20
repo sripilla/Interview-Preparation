@@ -1,0 +1,332 @@
+<!-- =========================================================
+   SECTION 3: LINKS & IMAGES
+   ========================================================= -->
+
+<!--
+QUICK THEORY REVISION
+
+=============================================================
+1. <a> — ANCHOR TAG / LINK
+=============================================================
+
+The <a> tag is used to create clickable links.
+
+Basic syntax:
+
+<a href="URL">Link Text</a>
+
+Example:
+
+<a href="https://example.com">Visit Example</a>
+
+IMPORTANT:
+- href tells the browser WHERE the link should go.
+- The text between <a> and </a> is what the user clicks.
+
+-------------------------------------------------------------
+
+2. EXTERNAL LINKS
+-------------------------------------------------------------
+
+An external link takes the user to another website.
+
+Example:
+
+<a href="https://www.google.com">Visit Google</a>
+
+-------------------------------------------------------------
+
+3. target="_blank"
+-------------------------------------------------------------
+
+By default, a link opens in the same browser tab.
+
+To open a link in a new tab:
+
+<a href="https://www.google.com" target="_blank">
+    Visit Google
+</a>
+
+target="_blank" = open the link in a new tab.
+
+-------------------------------------------------------------
+
+4. INTERNAL / SAME-PAGE LINKS
+-------------------------------------------------------------
+
+A link can jump to another section on the SAME page.
+
+Step 1:
+Give the destination element an id.
+
+Example:
+
+<h2 id="contact">Contact</h2>
+
+Step 2:
+Create a link using # followed by the id.
+
+Example:
+
+<a href="#contact">Go to Contact</a>
+
+IMPORTANT:
+- href="#contact" points to id="contact".
+- The id value must match exactly.
+
+-------------------------------------------------------------
+
+5. <img> — IMAGE TAG
+-------------------------------------------------------------
+
+The <img> tag displays an image.
+
+Basic syntax:
+
+<img src="photo.jpg" alt="Description of image">
+
+IMPORTANT ATTRIBUTES:
+
+src
+- Specifies where the image is located.
+
+alt
+- Provides a description of the image.
+- Important for accessibility.
+- Can be displayed if the image cannot load.
+
+Example:
+
+<img src="mountain.jpg" alt="Snow-covered mountain">
+
+-------------------------------------------------------------
+
+6. IMAGE PATHS
+-------------------------------------------------------------
+
+If the image is in the same folder as the HTML file:
+
+<img src="photo.jpg" alt="My photo">
+
+If the image is inside an images folder:
+
+<img src="images/photo.jpg" alt="My photo">
+
+If you use an online image URL:
+
+<img src="https://example.com/photo.jpg" alt="Description">
+
+-------------------------------------------------------------
+
+7. <img> IS A VOID ELEMENT
+-------------------------------------------------------------
+
+An image does not have a closing tag.
+
+Correct:
+
+<img src="photo.jpg" alt="Description">
+
+Incorrect:
+
+<img src="photo.jpg" alt="Description"></img>
+
+In React JSX, you will later write:
+
+<img src="photo.jpg" alt="Description" />
+
+-------------------------------------------------------------
+
+KEY DIFFERENCE TO REMEMBER:
+
+<a>
+- Creates a clickable link.
+- Uses href to specify the destination.
+
+<img>
+- Displays an image.
+- Uses src to specify the image location.
+- Uses alt to describe the image.
+=============================================================
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Links and Images</title>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PAGE HEADING
+         ===================================================== -->
+
+    <h1>Learning Links and Images</h1>
+
+    <p>
+        This page demonstrates different types of links and
+        how to display images in HTML.
+    </p>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         EXTERNAL LINK
+         ===================================================== -->
+
+    <h2>1. External Link</h2>
+
+    <p>
+        Click the link below to visit Google:
+    </p>
+
+    <a href="https://www.google.com">
+        Visit Google
+    </a>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         LINK THAT OPENS IN A NEW TAB
+         ===================================================== -->
+
+    <h2>2. Open Link in a New Tab</h2>
+
+    <p>
+        This link should open Google in a new browser tab:
+    </p>
+
+    <a href="https://www.google.com" target="_blank">
+        Open Google in New Tab
+    </a>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         SAME-PAGE NAVIGATION
+         ===================================================== -->
+
+    <h2>3. Same-Page Link</h2>
+
+    <p>
+        Click below to jump directly to the Contact section:
+    </p>
+
+    <a href="#contact">
+        Go to Contact Section
+    </a>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         IMAGE USING AN ONLINE SOURCE
+         ===================================================== -->
+
+    <h2>4. Displaying an Image</h2>
+
+    <p>
+        The image below uses the src attribute to specify
+        the image location.
+    </p>
+
+    <img
+        src="https://picsum.photos/400/250"
+        alt="Random sample photograph"
+    >
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         IMAGE WITH A LOCAL FILE
+         
+         FOR THIS TO WORK:
+         
+         1. Download any image.
+         2. Place it inside your HTML folder.
+         3. Rename it to profile.jpg.
+         4. Uncomment the img tag below.
+         ===================================================== -->
+
+    <h2>5. Local Image Practice</h2>
+
+    <!--
+    <img
+        src="profile.jpg"
+        alt="My profile photograph"
+        width="300"
+    >
+    -->
+
+    <p>
+        Later, add your own local image here.
+    </p>
+
+
+    <!-- =====================================================
+         CONTACT SECTION
+
+         Notice:
+         id="contact"
+
+         The earlier link:
+
+         <a href="#contact">
+
+         jumps directly to this section.
+         ===================================================== -->
+
+    <hr>
+
+    <h2 id="contact">Contact</h2>
+
+    <p>
+        Thank you for visiting my HTML practice page.
+    </p>
+
+    <p>
+        Email:
+        <a href="mailto:example@email.com">
+            example@email.com
+        </a>
+    </p>
+
+
+    <hr>
+
+
+    <!-- =====================================================
+         FINAL PRACTICE AREA
+         ===================================================== -->
+
+    <h2>Practice Area</h2>
+
+    <p>
+        Try adding your own:
+    </p>
+
+    <p>
+        1. External website link<br>
+        2. New tab link<br>
+        3. Same-page link<br>
+        4. Local image
+    </p>
+
+</body>
+
+</html>

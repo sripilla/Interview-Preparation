@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Exercise 6 - Grid</title>
+
+    <!-- Connect external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 6
+        TOPIC: CSS GRID
+        ============================================================
+
+        CSS GRID is used for TWO-DIMENSIONAL layouts.
+
+        That means it controls:
+
+        - ROWS
+        AND
+        - COLUMNS
+
+        ============================================================
+        FLEXBOX vs GRID
+        ============================================================
+
+        FLEXBOX:
+        Best for ONE dimension.
+
+        Example:
+
+        [Item 1] [Item 2] [Item 3]
+
+        OR:
+
+        [Item 1]
+        [Item 2]
+        [Item 3]
+
+
+        GRID:
+        Best for TWO dimensions.
+
+        Example:
+
+        [1] [2] [3]
+        [4] [5] [6]
+
+
+        ============================================================
+        STEP 1: CREATE A GRID CONTAINER
+        ============================================================
+
+        display: grid;
+
+        The direct children become GRID ITEMS.
+
+
+        ============================================================
+        GRID-TEMPLATE-COLUMNS
+        ============================================================
+
+        Defines the number and size of columns.
+
+        Example:
+
+        grid-template-columns: 1fr 1fr 1fr;
+
+        This creates 3 equal columns.
+
+        fr = fraction of available space.
+
+
+        ============================================================
+        GRID-TEMPLATE-ROWS
+        ============================================================
+
+        Defines the rows.
+
+        Example:
+
+        grid-template-rows: auto auto;
+
+        auto means the row size is determined automatically
+        based on its content.
+
+
+        ============================================================
+        GAP
+        ============================================================
+
+        Creates space between rows and columns.
+
+        Example:
+
+        gap: 20px;
+
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program and observe:
+
+        - display: grid
+        - grid-template-columns
+        - grid-template-rows
+        - fr unit
+        - gap
+        - Different column sizes
+        ============================================================
+    -->
+
+
+    <h1>CSS Grid Practice</h1>
+
+
+    <!-- ========================================================
+         1. THREE EQUAL COLUMNS
+    ========================================================= -->
+
+    <h2>1. Three Equal Columns</h2>
+
+    <div class="grid-container three-columns">
+
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         2. TWO COLUMNS
+    ========================================================= -->
+
+    <h2>2. Two Equal Columns</h2>
+
+    <div class="grid-container two-columns">
+
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         3. DIFFERENT COLUMN SIZES
+    ========================================================= -->
+
+    <h2>3. Different Column Sizes</h2>
+
+    <div class="grid-container different-columns">
+
+        <div class="grid-item">Sidebar</div>
+        <div class="grid-item">Main Content</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         4. EXPLICIT ROWS
+    ========================================================= -->
+
+    <h2>4. Rows and Columns</h2>
+
+    <div class="grid-container rows-columns">
+
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         5. GRID GAP
+    ========================================================= -->
+
+    <h2>5. Gap Between Grid Items</h2>
+
+    <div class="grid-container large-gap">
+
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">D</div>
+
+    </div>
+
+</body>
+</html>

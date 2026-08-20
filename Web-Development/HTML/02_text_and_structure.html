@@ -1,0 +1,233 @@
+<!-- =========================================================
+   SECTION 2: TEXT & STRUCTURE TAGS
+   ========================================================= -->
+
+<!--
+QUICK THEORY REVISION
+
+1. HEADINGS
+
+   HTML provides six heading levels:
+
+   <h1> = Main / most important heading
+   <h2> = Subheading
+   <h3> = Sub-subheading
+   <h4> = Smaller heading
+   <h5> = Smaller heading
+   <h6> = Least important heading
+
+   IMPORTANT:
+   - h1 to h6 represent importance and structure.
+   - Do not choose headings only based on their visual size.
+   - Usually, a page has one main h1.
+
+------------------------------------------------------------
+
+2. <p> — PARAGRAPH
+
+   Used for a paragraph of text.
+
+   Example:
+   <p>This is a paragraph.</p>
+
+   A paragraph is a block-level element.
+
+------------------------------------------------------------
+
+3. <div> — BLOCK CONTAINER
+
+   Used to group larger sections of content.
+
+   Example:
+
+   <div>
+       <h2>About Me</h2>
+       <p>I am learning web development.</p>
+   </div>
+
+   KEY POINT:
+   - div is a block-level element.
+   - It normally starts on a new line.
+   - It takes the available width of its container.
+   - Multiple div elements normally stack vertically.
+
+------------------------------------------------------------
+
+4. <span> — INLINE CONTAINER
+
+   Used to group a small part of text.
+
+   Example:
+
+   <p>
+       HTML is <span>important</span> for web development.
+   </p>
+
+   KEY POINT:
+   - span is an inline element.
+   - It stays in the same line as surrounding text.
+   - It only takes the space it needs.
+   - It is commonly used later with CSS for styling
+     a specific part of text.
+
+------------------------------------------------------------
+
+5. <br> — LINE BREAK
+
+   Moves the following content to a new line.
+
+   Example:
+
+   Hello<br>
+   World
+
+   Result:
+
+   Hello
+   World
+
+   <br> does NOT need a closing tag.
+
+------------------------------------------------------------
+
+6. <hr> — HORIZONTAL RULE
+
+   Creates a horizontal divider between sections.
+
+   Example:
+
+   <hr>
+
+   It is useful for separating content visually.
+
+------------------------------------------------------------
+
+IMPORTANT DIFFERENCE: div vs span
+
+   <div>
+       = Block-level
+       = Starts on a new line
+       = Used for grouping larger sections
+
+   <span>
+       = Inline
+       = Stays within the same line
+       = Used for grouping small parts of text
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Text and Structure Tags</title>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADINGS
+         ===================================================== -->
+
+    <h1>My Web Development Journey</h1>
+
+    <h2>Learning HTML</h2>
+
+    <h3>Why HTML Is Important</h3>
+
+    <p>
+        HTML is the foundation of a webpage. Before learning React,
+        I need to understand how webpages are structured.
+    </p>
+
+
+    <!-- =====================================================
+         DIV: BLOCK-LEVEL CONTAINER
+         ===================================================== -->
+
+    <hr>
+
+    <div>
+        <h2>About Me</h2>
+
+        <p>
+            I am currently learning HTML as part of my web development journey.
+        </p>
+
+        <p>
+            My goal is to build a strong foundation before moving to CSS,
+            JavaScript, and React.
+        </p>
+    </div>
+
+
+    <!-- =====================================================
+         SPAN: INLINE CONTAINER
+         ===================================================== -->
+
+    <hr>
+
+    <h2>Important Concept</h2>
+
+    <p>
+        HTML is the
+        <span>foundation</span>
+        of web development.
+    </p>
+
+    <p>
+        A <span>span</span> stays inline with the surrounding text.
+    </p>
+
+
+    <!-- =====================================================
+         BR: LINE BREAK
+         ===================================================== -->
+
+    <hr>
+
+    <h2>My Learning Plan</h2>
+
+    HTML<br>
+    CSS<br>
+    JavaScript<br>
+    React
+
+
+    <!-- =====================================================
+         DIV BEHAVIOUR
+         ===================================================== -->
+
+    <hr>
+
+    <h2>Block-Level Example</h2>
+
+    <div>First div — this starts on its own line.</div>
+
+    <div>Second div — this also starts on a new line.</div>
+
+    <div>Third div — div elements stack vertically.</div>
+
+
+    <!-- =====================================================
+         FINAL SECTION
+         ===================================================== -->
+
+    <hr>
+
+    <h2>My Goal</h2>
+
+    <p>
+        I want to understand
+        <span>HTML structure</span>,
+        <span>CSS styling</span>,
+        and <span>JavaScript logic</span>
+        before learning React.
+    </p>
+
+</body>
+
+</html>

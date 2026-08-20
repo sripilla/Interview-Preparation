@@ -1,0 +1,154 @@
+/*
+    ============================================================
+    CSS — EXERCISE 9
+    TOPIC: COMMON TEXT & FONT PROPERTIES
+    ============================================================
+*/
+
+
+/*
+    Basic page styling
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+
+/*
+    Common container for each demonstration
+*/
+
+.demo-box {
+    width: 700px;
+
+    padding: 20px;
+    margin-bottom: 40px;
+
+    border: 3px solid black;
+    background-color: lightgray;
+}
+
+
+/*
+    ============================================================
+    1. FONT-FAMILY
+    ============================================================
+*/
+
+.arial-text {
+    font-family: Arial, sans-serif;
+}
+
+.serif-text {
+    font-family: Georgia, serif;
+}
+
+.mono-text {
+    font-family: "Courier New", monospace;
+}
+
+
+/*
+    ============================================================
+    2. FONT-SIZE
+    ============================================================
+*/
+
+.small-text {
+    font-size: 14px;
+}
+
+.medium-text {
+    font-size: 24px;
+}
+
+.large-text {
+    font-size: 40px;
+}
+
+
+/*
+    ============================================================
+    3. FONT-WEIGHT
+    ============================================================
+*/
+
+.normal-weight {
+    font-weight: 400;
+}
+
+.bold-weight {
+    font-weight: 700;
+}
+
+
+/*
+    ============================================================
+    4. TEXT-ALIGN
+    ============================================================
+
+    These paragraphs take the available width of their parent.
+
+    text-align controls where the text sits inside that space.
+*/
+
+.text-align-box p {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+
+/*
+    ============================================================
+    5. LINE-HEIGHT
+    ============================================================
+
+    A width is given so the text wraps onto multiple lines.
+*/
+
+.normal-line-height {
+    width: 400px;
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+.large-line-height {
+    width: 400px;
+    font-size: 20px;
+
+    line-height: 2;
+}
+
+
+/*
+    ============================================================
+    6. TEXT-DECORATION
+    ============================================================
+*/
+
+.no-underline {
+    text-decoration: none;
+}
+
+.underlined-text {
+    text-decoration: underline;
+}
+
+.strikethrough-text {
+    text-decoration: line-through;
+}

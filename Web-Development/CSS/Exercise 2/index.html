@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Exercise 2 - Selectors</title>
+
+    <!-- Connect external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 2
+        TOPIC: SELECTORS
+        ============================================================
+
+        A CSS SELECTOR tells CSS WHICH HTML element(s) to style.
+
+        ------------------------------------------------------------
+        1. ELEMENT / TAG SELECTOR
+        ------------------------------------------------------------
+
+        p {
+            color: blue;
+        }
+
+        Targets ALL <p> elements.
+
+        ------------------------------------------------------------
+        2. CLASS SELECTOR
+        ------------------------------------------------------------
+
+        .highlight {
+            color: red;
+        }
+
+        Targets elements with:
+
+        class="highlight"
+
+        A class can be used on MULTIPLE elements.
+
+        ------------------------------------------------------------
+        3. ID SELECTOR
+        ------------------------------------------------------------
+
+        #main-title {
+            color: green;
+        }
+
+        Targets the element with:
+
+        id="main-title"
+
+        An ID should normally be UNIQUE on a page.
+
+        ------------------------------------------------------------
+        4. DESCENDANT SELECTOR
+        ------------------------------------------------------------
+
+        div p {
+            color: purple;
+        }
+
+        Targets ALL <p> elements inside a <div>.
+
+        The <p> does NOT need to be a direct child.
+
+        ------------------------------------------------------------
+        5. CHILD SELECTOR
+        ------------------------------------------------------------
+
+        div > p {
+            color: orange;
+        }
+
+        Targets ONLY <p> elements that are DIRECT children of <div>.
+
+        ------------------------------------------------------------
+        6. PSEUDO-CLASS
+        ------------------------------------------------------------
+
+        button:hover {
+            background-color: yellow;
+        }
+
+        Applies a style when the mouse is hovering over the button.
+
+        ------------------------------------------------------------
+        7. POSITIONAL PSEUDO-CLASS
+        ------------------------------------------------------------
+
+        li:first-child {
+            color: red;
+        }
+
+        Targets the FIRST child in a list.
+
+        ------------------------------------------------------------
+        IMPORTANT: SPECIFICITY
+        ------------------------------------------------------------
+
+        When multiple CSS rules target the same element,
+        CSS decides which rule has higher priority.
+
+        Basic rule:
+
+        ID (#) > CLASS (.) > ELEMENT (tag)
+
+        Example:
+
+        p {
+            color: blue;
+        }
+
+        .special {
+            color: green;
+        }
+
+        #unique {
+            color: red;
+        }
+
+        If one <p> has both class="special" and id="unique",
+        the ID selector normally wins because it has higher specificity.
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program.
+
+        Observe which elements are affected by each selector.
+
+        Then experiment by changing selectors and values.
+        ============================================================
+    -->
+
+    <!-- ID SELECTOR -->
+    <h1 id="main-title">CSS Selectors Practice</h1>
+
+
+    <!-- ELEMENT / TAG SELECTOR -->
+    <h2>1. Element Selector</h2>
+
+    <p>
+        This paragraph is selected using the p selector.
+    </p>
+
+    <p>
+        This is another paragraph selected using the same p selector.
+    </p>
+
+
+    <!-- CLASS SELECTOR -->
+    <h2>2. Class Selector</h2>
+
+    <p class="highlight">
+        This paragraph has the "highlight" class.
+    </p>
+
+    <div class="highlight">
+        This div also has the "highlight" class.
+    </div>
+
+
+    <!-- DESCENDANT SELECTOR -->
+    <h2>3. Descendant Selector</h2>
+
+    <div class="container">
+        <p>This paragraph is inside a div.</p>
+
+        <section>
+            <p>
+                This paragraph is also inside the div,
+                but through a section.
+            </p>
+        </section>
+    </div>
+
+
+    <!-- CHILD SELECTOR -->
+    <h2>4. Child Selector</h2>
+
+    <div class="parent">
+
+        <p>
+            I am a direct child of .parent.
+        </p>
+
+        <section>
+            <p>
+                I am NOT a direct child of .parent.
+            </p>
+        </section>
+
+    </div>
+
+
+    <!-- HOVER PSEUDO-CLASS -->
+    <h2>5. Hover Pseudo-Class</h2>
+
+    <button>Hover Over Me</button>
+
+
+    <!-- FIRST-CHILD PSEUDO-CLASS -->
+    <h2>6. First Child Selector</h2>
+
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+
+
+    <!-- SPECIFICITY -->
+    <h2>7. Specificity Practice</h2>
+
+    <p class="special" id="unique">
+        Which CSS rule wins here?
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Exercise 9 - Text and Font Properties</title>
+
+    <!-- Connect external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 9
+        TOPIC: COMMON TEXT & FONT PROPERTIES
+        ============================================================
+
+        CSS provides many properties to control how text looks.
+
+        Important properties:
+
+        1. font-family
+        2. font-size
+        3. font-weight
+        4. text-align
+        5. line-height
+        6. text-decoration
+
+
+        ============================================================
+        1. FONT-FAMILY
+        ============================================================
+
+        Controls the typeface used for text.
+
+        Example:
+
+        font-family: Arial, sans-serif;
+
+        Arial is the preferred font.
+
+        sans-serif is a fallback font family.
+
+        If Arial is unavailable, the browser can use another
+        sans-serif font.
+
+
+        ============================================================
+        2. FONT-SIZE
+        ============================================================
+
+        Controls the size of text.
+
+        Example:
+
+        font-size: 20px;
+
+
+        ============================================================
+        3. FONT-WEIGHT
+        ============================================================
+
+        Controls how thick or bold text appears.
+
+        Examples:
+
+        font-weight: normal;
+        font-weight: bold;
+
+        Numeric values:
+
+        400 → normal
+        700 → bold
+
+
+        ============================================================
+        4. TEXT-ALIGN
+        ============================================================
+
+        Controls horizontal alignment of text inside an element.
+
+        Examples:
+
+        text-align: left;
+        text-align: center;
+        text-align: right;
+        text-align: justify;
+
+
+        ============================================================
+        5. LINE-HEIGHT
+        ============================================================
+
+        Controls vertical spacing between lines of text.
+
+        Example:
+
+        line-height: 1.5;
+
+        This means the line box height is 1.5 times
+        the element's font size.
+
+
+        ============================================================
+        6. TEXT-DECORATION
+        ============================================================
+
+        Often used to control link underlines.
+
+        Example:
+
+        text-decoration: none;
+
+        Removes the default underline from a link.
+
+        Other examples:
+
+        text-decoration: underline;
+        text-decoration: line-through;
+
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program and observe how each property changes text.
+        ============================================================
+    -->
+
+
+    <h1>CSS Text and Font Practice</h1>
+
+
+    <!-- ========================================================
+         1. FONT-FAMILY
+    ========================================================= -->
+
+    <h2>1. font-family</h2>
+
+    <div class="demo-box">
+
+        <p class="arial-text">
+            This text uses Arial, with sans-serif as fallback.
+        </p>
+
+        <p class="serif-text">
+            This text uses Georgia, with serif as fallback.
+        </p>
+
+        <p class="mono-text">
+            This text uses a monospace font.
+        </p>
+
+    </div>
+
+
+    <!-- ========================================================
+         2. FONT-SIZE
+    ========================================================= -->
+
+    <h2>2. font-size</h2>
+
+    <div class="demo-box">
+
+        <p class="small-text">
+            Small Text - 14px
+        </p>
+
+        <p class="medium-text">
+            Medium Text - 24px
+        </p>
+
+        <p class="large-text">
+            Large Text - 40px
+        </p>
+
+    </div>
+
+
+    <!-- ========================================================
+         3. FONT-WEIGHT
+    ========================================================= -->
+
+    <h2>3. font-weight</h2>
+
+    <div class="demo-box">
+
+        <p class="normal-weight">
+            Normal Weight - 400
+        </p>
+
+        <p class="bold-weight">
+            Bold Weight - 700
+        </p>
+
+    </div>
+
+
+    <!-- ========================================================
+         4. TEXT-ALIGN
+    ========================================================= -->
+
+    <h2>4. text-align</h2>
+
+    <div class="demo-box text-align-box">
+
+        <p class="align-left">
+            This text is aligned left.
+        </p>
+
+        <p class="align-center">
+            This text is aligned center.
+        </p>
+
+        <p class="align-right">
+            This text is aligned right.
+        </p>
+
+    </div>
+
+
+    <!-- ========================================================
+         5. LINE-HEIGHT
+    ========================================================= -->
+
+    <h2>5. line-height</h2>
+
+    <div class="demo-box">
+
+        <p class="normal-line-height">
+            This paragraph uses a normal line height.
+            Notice how close the lines appear when the text wraps
+            across multiple lines inside the container.
+        </p>
+
+        <p class="large-line-height">
+            This paragraph uses a larger line height.
+            Notice the increased vertical space between lines
+            when the text wraps across multiple lines.
+        </p>
+
+    </div>
+
+
+    <!-- ========================================================
+         6. TEXT-DECORATION
+    ========================================================= -->
+
+    <h2>6. text-decoration</h2>
+
+    <div class="demo-box">
+
+        <a href="#" class="no-underline">
+            This link has no underline
+        </a>
+
+        <br><br>
+
+        <p class="underlined-text">
+            This text is underlined.
+        </p>
+
+        <p class="strikethrough-text">
+            This text has a line through it.
+        </p>
+
+    </div>
+
+</body>
+</html>

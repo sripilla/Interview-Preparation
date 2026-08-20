@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Exercise 10 - Responsive Design</title>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 10
+        TOPIC: RESPONSIVE DESIGN & MEDIA QUERIES
+        ============================================================
+
+        RESPONSIVE DESIGN means creating a website that adapts
+        to different screen sizes.
+
+        For example:
+
+        Mobile
+        ↓
+        Tablet
+        ↓
+        Laptop
+        ↓
+        Large Desktop
+
+
+        ============================================================
+        VIEWPORT META TAG
+        ============================================================
+
+        This is important for mobile devices:
+
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+
+        width=device-width
+        → Use the actual device screen width.
+
+        initial-scale=1.0
+        → Start without zooming the page.
+
+
+        ============================================================
+        MEDIA QUERIES
+        ============================================================
+
+        A media query applies CSS only when a condition is true.
+
+        Example:
+
+        @media (max-width: 768px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+        }
+
+        This means:
+
+        IF screen width is 768px OR SMALLER
+
+        THEN apply the CSS inside the media query.
+
+
+        ============================================================
+        TWO COMMON APPROACHES
+        ============================================================
+
+        1. DESKTOP-FIRST
+
+        Write normal CSS for large screens.
+
+        Then use:
+
+        @media (max-width: 768px)
+
+        to change the layout for smaller screens.
+
+
+        2. MOBILE-FIRST
+
+        Write normal CSS for small screens first.
+
+        Then use:
+
+        @media (min-width: 768px)
+
+        to add/change styles for larger screens.
+
+
+        Mobile-first is a common modern approach.
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program.
+
+        Resize your browser window and observe:
+
+        - Navigation layout
+        - Card layout
+        - Font sizes
+        - Media query changes
+        ============================================================
+    -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================================================
+         HEADER
+    ========================================================= -->
+
+    <header class="header">
+
+        <h1>My Responsive Website</h1>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ========================================================
+         MAIN CONTENT
+    ========================================================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <h2>Responsive Design Practice</h2>
+
+            <p>
+                Resize your browser window to see how this layout
+                changes for smaller screens.
+            </p>
+
+        </section>
+
+
+        <!-- ====================================================
+             CARDS
+        ==================================================== -->
+
+        <section class="card-container">
+
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>
+                    This card is part of a responsive layout.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>
+                    This card changes position when the screen
+                    becomes smaller.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Card 3</h3>
+                <p>
+                    Resize the browser to observe the layout.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

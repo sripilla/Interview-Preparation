@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Exercise 5 - Flexbox</title>
+
+    <!-- Connect external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+        ============================================================
+        CSS — EXERCISE 5
+        TOPIC: FLEXBOX
+        ============================================================
+
+        FLEXBOX is used to arrange elements in ONE DIMENSION.
+
+        That means Flexbox is mainly used for:
+
+        - A row of elements
+        OR
+        - A column of elements
+
+        ============================================================
+        STEP 1: CREATE A FLEX CONTAINER
+        ============================================================
+
+        display: flex;
+
+        Example:
+
+        .container {
+            display: flex;
+        }
+
+        All DIRECT CHILDREN of the container become FLEX ITEMS.
+
+        Example:
+
+        <div class="container">
+            <div>Item 1</div>  ← Flex Item
+            <div>Item 2</div>  ← Flex Item
+            <div>Item 3</div>  ← Flex Item
+        </div>
+
+
+        ============================================================
+        FLEX-DIRECTION
+        ============================================================
+
+        Controls the MAIN DIRECTION.
+
+        flex-direction: row;
+
+        Items are arranged:
+
+        Item 1 → Item 2 → Item 3
+
+
+        flex-direction: column;
+
+        Items are arranged:
+
+        Item 1
+          ↓
+        Item 2
+          ↓
+        Item 3
+
+
+        ============================================================
+        MAIN AXIS vs CROSS AXIS
+        ============================================================
+
+        If:
+
+        flex-direction: row;
+
+        MAIN AXIS  → horizontal
+        CROSS AXIS → vertical
+
+
+        If:
+
+        flex-direction: column;
+
+        MAIN AXIS  → vertical
+        CROSS AXIS → horizontal
+
+
+        ============================================================
+        JUSTIFY-CONTENT
+        ============================================================
+
+        Controls alignment along the MAIN AXIS.
+
+        Examples:
+
+        justify-content: flex-start;
+        justify-content: center;
+        justify-content: flex-end;
+        justify-content: space-between;
+        justify-content: space-around;
+
+
+        ============================================================
+        ALIGN-ITEMS
+        ============================================================
+
+        Controls alignment along the CROSS AXIS.
+
+        Examples:
+
+        align-items: flex-start;
+        align-items: center;
+        align-items: flex-end;
+        align-items: stretch;
+
+
+        ============================================================
+        GAP
+        ============================================================
+
+        Creates space BETWEEN flex items.
+
+        Example:
+
+        gap: 20px;
+
+
+        ============================================================
+        FLEX: 1
+        ============================================================
+
+        Allows a flex item to grow and fill available space.
+
+        Example:
+
+        .item {
+            flex: 1;
+        }
+
+        If 3 items all have flex: 1,
+        they share available space approximately equally.
+
+        ============================================================
+        YOUR GOAL
+        ============================================================
+
+        Run this program and observe:
+
+        - display: flex
+        - row vs column
+        - justify-content
+        - align-items
+        - gap
+        - flex: 1
+        ============================================================
+    -->
+
+
+    <h1>CSS Flexbox Practice</h1>
+
+
+    <!-- ========================================================
+         1. BASIC FLEXBOX
+    ========================================================= -->
+
+    <h2>1. Basic Flexbox</h2>
+
+    <div class="flex-container basic-flex">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         2. FLEX DIRECTION - COLUMN
+    ========================================================= -->
+
+    <h2>2. flex-direction: column</h2>
+
+    <div class="flex-container column-flex">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         3. JUSTIFY-CONTENT
+    ========================================================= -->
+
+    <h2>3. justify-content: space-between</h2>
+
+    <div class="flex-container justify-flex">
+
+        <div class="item small-item">Item 1</div>
+        <div class="item small-item">Item 2</div>
+        <div class="item small-item">Item 3</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         4. ALIGN-ITEMS
+    ========================================================= -->
+
+    <h2>4. align-items: center</h2>
+
+    <div class="flex-container align-flex">
+
+        <div class="item small-item">Item 1</div>
+        <div class="item small-item">Item 2</div>
+        <div class="item small-item">Item 3</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         5. GAP
+    ========================================================= -->
+
+    <h2>5. gap</h2>
+
+    <div class="flex-container gap-flex">
+
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+    </div>
+
+
+    <!-- ========================================================
+         6. FLEX: 1
+    ========================================================= -->
+
+    <h2>6. flex: 1</h2>
+
+    <div class="flex-container flex-grow-container">
+
+        <div class="item grow-item">Item 1</div>
+        <div class="item grow-item">Item 2</div>
+        <div class="item grow-item">Item 3</div>
+
+    </div>
+
+</body>
+</html>

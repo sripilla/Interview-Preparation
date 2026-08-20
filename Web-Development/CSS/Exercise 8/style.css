@@ -1,0 +1,191 @@
+/*
+    ============================================================
+    CSS — EXERCISE 8
+    TOPIC: DISPLAY PROPERTY
+    ============================================================
+*/
+
+
+/*
+    Basic page styling
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+
+/*
+    ============================================================
+    COMMON AREA
+    ============================================================
+*/
+
+.display-area {
+    width: 700px;
+    min-height: 100px;
+
+    padding: 20px;
+    margin-bottom: 40px;
+
+    border: 3px solid black;
+    background-color: lightgray;
+}
+
+
+/*
+    ============================================================
+    1. DISPLAY: BLOCK
+    ============================================================
+
+    These are originally <span> elements.
+
+    span is normally inline.
+
+    But display: block changes their layout behavior.
+
+    Each element:
+
+    - Starts on a new line
+    - Can use width and height normally
+*/
+
+.block-element {
+    display: block;
+
+    width: 200px;
+    height: 40px;
+
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border: 2px solid black;
+    background-color: lightblue;
+}
+
+
+/*
+    ============================================================
+    2. DISPLAY: INLINE
+    ============================================================
+
+    These are originally <div> elements.
+
+    div is normally block.
+
+    But display: inline changes their layout behavior.
+
+    They appear on the same line when space allows.
+
+    Notice:
+
+    width and height are not useful for controlling
+    an ordinary inline box's layout in the same way.
+*/
+
+.inline-element {
+    display: inline;
+
+    width: 200px;
+    height: 80px;
+
+    padding: 10px;
+
+    border: 2px solid black;
+    background-color: lightgreen;
+}
+
+
+/*
+    ============================================================
+    3. DISPLAY: INLINE-BLOCK
+    ============================================================
+
+    Elements stay on the same line.
+
+    BUT:
+
+    width and height work for layout.
+
+    This combines useful behavior of:
+
+    inline + block
+*/
+
+.inline-block-element {
+    display: inline-block;
+
+    width: 150px;
+    height: 80px;
+
+    padding: 10px;
+
+    border: 2px solid black;
+    background-color: lightpink;
+
+    text-align: center;
+}
+
+
+/*
+    ============================================================
+    4. DISPLAY: NONE
+    ============================================================
+
+    The element is completely removed.
+
+    It does NOT:
+
+    - Appear on screen
+    - Reserve space in the layout
+*/
+
+.hidden-element {
+    display: none;
+}
+
+
+.normal-element {
+    width: 200px;
+
+    padding: 15px;
+    margin: 10px 0;
+
+    border: 2px solid black;
+    background-color: lightyellow;
+}
+
+
+/*
+    ============================================================
+    5. DISPLAY: FLEX
+    ============================================================
+
+    This element becomes a flex container.
+
+    Its DIRECT CHILDREN become flex items.
+*/
+
+.flex-container {
+    display: flex;
+
+    width: 700px;
+
+    padding: 20px;
+
+    border: 3px solid black;
+    background-color: lightgray;
+
+    gap: 20px;
+}
+
+
+.flex-item {
+    padding: 20px;
+
+    border: 2px solid black;
+    background-color: lightblue;
+
+    font-weight: bold;
+}

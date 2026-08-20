@@ -1,0 +1,400 @@
+<!-- =========================================================
+   SECTION 4: HTML LISTS
+   ========================================================= -->
+
+<!--
+QUICK THEORY REVISION
+
+=============================================================
+1. WHAT ARE HTML LISTS?
+=============================================================
+
+HTML lists are used to display multiple related items.
+
+The three main types of lists are:
+
+1. <ul> = Unordered List
+2. <ol> = Ordered List
+3. <li> = List Item
+
+IMPORTANT:
+
+<ul> and <ol> are containers for list items.
+
+Each individual item is placed inside:
+
+<li> ... </li>
+
+
+=============================================================
+2. <ul> — UNORDERED LIST
+=============================================================
+
+Used when the order of items is NOT important.
+
+By default, browsers usually display bullet points.
+
+Example:
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+Result:
+
+• HTML
+• CSS
+• JavaScript
+
+
+USE <ul> WHEN:
+
+- The order does not matter.
+- Listing skills.
+- Listing hobbies.
+- Listing technologies.
+- Listing features.
+
+
+=============================================================
+3. <ol> — ORDERED LIST
+=============================================================
+
+Used when the order of items IS important.
+
+By default, browsers usually display numbers.
+
+Example:
+
+<ol>
+    <li>Learn HTML</li>
+    <li>Learn CSS</li>
+    <li>Learn JavaScript</li>
+</ol>
+
+Result:
+
+1. Learn HTML
+2. Learn CSS
+3. Learn JavaScript
+
+
+USE <ol> WHEN:
+
+- Showing steps.
+- Instructions.
+- A sequence.
+- A process where order matters.
+
+
+=============================================================
+4. <li> — LIST ITEM
+=============================================================
+
+Each item inside a list uses <li>.
+
+Example:
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+</ul>
+
+IMPORTANT:
+
+<li> should normally be placed inside
+<ul> or <ol>.
+
+<li> = one individual list item.
+
+
+=============================================================
+5. NESTED LISTS
+=============================================================
+
+A list can contain another list.
+
+Example:
+
+<ul>
+    <li>
+        Frontend
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </li>
+</ul>
+
+This is called a NESTED LIST.
+
+Useful for showing hierarchy.
+
+Example:
+
+Web Development
+    Frontend
+        HTML
+        CSS
+        JavaScript
+    Backend
+        Python
+        Django
+
+
+=============================================================
+6. <ul> VS <ol>
+=============================================================
+
+<ul>
+= Unordered list
+= Usually shows bullets
+= Order is not important
+
+<ol>
+= Ordered list
+= Usually shows numbers
+= Order is important
+
+
+EXAMPLES:
+
+Skills:
+Use <ul>
+
+Steps to build a website:
+Use <ol>
+
+
+=============================================================
+KEY POINTS TO REMEMBER
+=============================================================
+
+<ul> = Unordered list
+
+<ol> = Ordered list
+
+<li> = Individual list item
+
+Nested list = A list inside another list
+
+Use <ul> when order does NOT matter.
+
+Use <ol> when order DOES matter.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Lists</title>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PAGE INTRODUCTION
+         ===================================================== -->
+
+    <h1>Learning HTML Lists</h1>
+
+    <p>
+        This page demonstrates unordered lists, ordered lists,
+        and nested lists.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         1. UNORDERED LIST
+         ===================================================== -->
+
+    <h2>1. Technologies I Want to Learn</h2>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+    </ul>
+
+    <p>
+        The order of these technologies is not important,
+        so an unordered list is used.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         2. ORDERED LIST
+         ===================================================== -->
+
+    <h2>2. My Web Development Learning Order</h2>
+
+    <ol>
+        <li>Learn HTML</li>
+        <li>Learn CSS</li>
+        <li>Learn JavaScript</li>
+        <li>Learn React</li>
+        <li>Build Projects</li>
+    </ol>
+
+    <p>
+        The order is important here, so an ordered list is used.
+    </p>
+
+    <hr>
+
+
+    <!-- =====================================================
+         3. NESTED UNORDERED LIST
+         ===================================================== -->
+
+    <h2>3. Web Development Technologies</h2>
+
+    <ul>
+
+        <li>
+            Frontend
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+
+        </li>
+
+
+        <li>
+            Backend
+
+            <ul>
+                <li>Python</li>
+                <li>Django</li>
+                <li>Node.js</li>
+            </ul>
+
+        </li>
+
+
+        <li>
+            Database
+
+            <ul>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+            </ul>
+
+        </li>
+
+    </ul>
+
+    <hr>
+
+
+    <!-- =====================================================
+         4. NESTED ORDERED LIST
+         ===================================================== -->
+
+    <h2>4. Steps to Build a Simple Website</h2>
+
+    <ol>
+
+        <li>
+            Plan the Website
+
+            <ol>
+                <li>Decide the purpose</li>
+                <li>Plan the pages</li>
+            </ol>
+
+        </li>
+
+
+        <li>
+            Build the Structure
+
+            <ol>
+                <li>Create HTML files</li>
+                <li>Add headings and paragraphs</li>
+                <li>Add links and images</li>
+            </ol>
+
+        </li>
+
+
+        <li>
+            Style the Website
+
+            <ol>
+                <li>Learn CSS</li>
+                <li>Add colors and spacing</li>
+            </ol>
+
+        </li>
+
+    </ol>
+
+    <hr>
+
+
+    <!-- =====================================================
+         5. PRACTICAL EXAMPLE
+         ===================================================== -->
+
+    <h2>5. My Skills and Goals</h2>
+
+    <h3>Skills I Am Learning</h3>
+
+    <ul>
+        <li>Web Development</li>
+        <li>Python</li>
+        <li>Machine Learning</li>
+        <li>Artificial Intelligence</li>
+    </ul>
+
+
+    <h3>My Learning Goals</h3>
+
+    <ol>
+        <li>Understand HTML properly</li>
+        <li>Learn CSS fundamentals</li>
+        <li>Master JavaScript basics</li>
+        <li>Learn React</li>
+        <li>Build real-world projects</li>
+    </ol>
+
+
+    <!-- =====================================================
+         FINAL PRACTICE AREA
+         ===================================================== -->
+
+    <hr>
+
+    <h2>Practice Area</h2>
+
+    <p>Try these experiments yourself:</p>
+
+    <ol>
+        <li>Change one unordered list into an ordered list.</li>
+        <li>Change one ordered list into an unordered list.</li>
+        <li>Add your own favorite programming languages.</li>
+        <li>Add another category to the nested list.</li>
+        <li>Create a nested list of your own.</li>
+    </ol>
+
+</body>
+
+</html>
