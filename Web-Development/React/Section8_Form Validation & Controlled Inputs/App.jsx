@@ -66,7 +66,8 @@ IMPORTANT PATTERN
 
 */
 
-import { useState } from "react";
+import React, { useState } from 'react';
+
 
 function App() {
   // State for input values
