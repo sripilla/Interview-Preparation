@@ -62,7 +62,7 @@ changes. Use useEffect instead.
 
 */
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
