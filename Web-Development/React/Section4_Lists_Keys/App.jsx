@@ -57,6 +57,7 @@ Array indexes can cause problems when
 items are added, deleted, or reordered.
 
 */
+import React from "react";
 
 function App() {
   const students = [
