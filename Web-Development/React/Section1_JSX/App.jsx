@@ -83,6 +83,7 @@ Examples:
 {age >= 18 ? "Adult" : "Minor"}
 
 */
+import React from "react";
 
 function App() {
   const name = "Likitha";
