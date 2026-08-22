@@ -62,7 +62,7 @@ when the new value depends on the old value.
 
 */
 
-import { useState } from "react";
+import React, { useState } from 'react';
 
 function App() {
   // count = current state
