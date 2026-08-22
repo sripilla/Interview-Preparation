@@ -89,6 +89,9 @@ Child Component
 
 */
 
+import React from "react";
+
+
 function Student({ name, course, age }) {
   return (
     <div>
