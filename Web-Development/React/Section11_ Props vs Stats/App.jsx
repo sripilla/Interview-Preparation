@@ -37,7 +37,7 @@ React re-renders the component
 
 */
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 // Child component receives a PROP
 function Child({ value }) {
