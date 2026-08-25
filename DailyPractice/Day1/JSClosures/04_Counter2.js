@@ -35,19 +35,29 @@ Constraints:
 -1000 <= init <= 1000
 0 <= calls.length <= 1000
 calls[i] is one of "increment", "decrement" and "reset"
-*/
 
-/**
- * @param {integer} init
- * @return { increment: Function, decrement: Function, reset: Function }
- */
-var createCounter = function(init) {
-    
+
+var counter= function(val){
+    let current = val;
+    return {
+        increment: function(){
+            current++;
+            return current;
+        },
+        reset: function(){
+            current= val;
+            return current;
+        },
+        decrement: function(){
+            current--;
+            return current;
+        }
+};
+   
 };
 
-/**
- * const counter = createCounter(5)
- * counter.increment(); // 6
- * counter.reset(); // 5
- * counter.decrement(); // 4
- */
+const f = counter(5);
+
+console.log(f.increment()); 
+console.log(f.reset());     
+console.log(f.decrement());
