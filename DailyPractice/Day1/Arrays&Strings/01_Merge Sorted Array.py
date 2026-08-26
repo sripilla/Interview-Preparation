@@ -36,12 +36,30 @@ nums2.length == n
 1 <= m + n <= 200
 -109 <= nums1[i], nums2[j] <= 109
 
-"""
 
 
-class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
-        """
-        Do not return anything, modify nums1 in-place instead.
-        """
-        
+arr1=[]
+arr2=[]
+arr3=[]
+
+m= int(input("Enter the size of the first array:"))
+
+n= int(input("Enter the size of the second array:"))
+
+print(f"Enter {m} elements of the first array:")
+for i in range(m):
+    arr1.append(int(input()))
+
+print(f"Enter {n} elements of the second array:")
+for i in range (n):
+    arr2.append(int(input()))
+
+for i in range(m):
+    arr3.append(arr1[i])
+
+for i in range(n):
+    arr3.append(arr2[i])
+
+
+arr3.sort()
+print("Merged array:", arr3);
