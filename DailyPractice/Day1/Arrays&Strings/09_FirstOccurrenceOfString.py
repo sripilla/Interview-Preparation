@@ -21,7 +21,16 @@ Constraints:
 1 <= haystack.length, needle.length <= 104
 haystack and needle consist of only lowercase English characters.
 """
+index=-1
+count=0
+w= input("Enter the word: ")
+s=input(f"Enter the string:")
 
-class Solution:
-    def strStr(self, haystack: str, needle: str) -> int:
-        
+for i in range(len(s)- len(w)+1):
+    for j in range(len(w)):
+        if s[i+j]==w[j]:
+            count+=1
+    if count==len(w):
+        index= i
+        break
+print("Index:", index)
