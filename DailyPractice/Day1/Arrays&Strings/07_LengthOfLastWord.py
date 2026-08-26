@@ -29,6 +29,11 @@ s consists of only English letters and spaces ' '.
 There will be at least one word in s.
 """
 
-class Solution:
-    def lengthOfLastWord(self, s: str) -> int:
-        
+s1=[]
+w=[]
+length=[]
+s= input("Enter the string:")
+s1= s.split()
+w=s1[-1]
+length= len(w)
+print("Length:", length)
