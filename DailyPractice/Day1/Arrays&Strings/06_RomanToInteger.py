@@ -44,6 +44,23 @@ s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 """
 
-class Solution:
-    def romanToInt(self, s: str) -> int:
-        
+m= input("Enter the Roman number:")
+
+values = {
+    "I": 1,
+    "V": 5,
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "D": 500,
+    "M": 1000
+}
+
+total=0
+for i in range (len(m)):
+    if i+1<len(m) and values[m[i]]< values[m[i+1]]:
+        total-=values[m[i]]
+    else:
+        total+=values[m[i]]
+
+print("Total:", total)
