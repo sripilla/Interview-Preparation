@@ -23,6 +23,21 @@ Constraints:
 strs[i] consists of only lowercase English letters if it is non-empty.
 """
 
-class Solution:
-    def longestCommonPrefix(self, strs: List[str]) -> str:
-        
+
+strs = []
+m = int(input("Enter the number of strings: "))
+print(f"Enter {m} strings:")
+for i in range(m):
+    strs.append(input())
+prefix = strs[0]
+for i in range(1, m):
+    j = 0
+    while j < len(prefix) and j < len(strs[i]):
+        if prefix[j] != strs[i][j]:
+            break
+        j += 1
+    prefix = prefix[:j]
+
+    if prefix == "":
+        break
+print("Longest common prefix:", prefix)
