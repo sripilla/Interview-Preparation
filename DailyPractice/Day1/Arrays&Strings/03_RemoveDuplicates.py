@@ -41,8 +41,27 @@ Constraints:
 1 <= nums.length <= 3 * 104
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
-"""
+"""arr1=[]
 
-class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
-        
+m= int(input("Enter the size of the array:"))
+
+print(f"Enter {m} elements of the first array:")
+for i in range(m):
+    arr1.append(int(input()))
+
+for i in range(m-1):
+    for j in range(i+1,m):
+        if arr1[i]==arr1[j]:
+            arr1[j]="_"
+
+numbers=[]
+uc=[]
+for i in range (m):
+    if arr1[i]=="_":
+        uc.append("_")
+    else:
+        numbers.append(arr1[i])
+
+numbers.sort()
+arr1= numbers+ uc
+print("array:", arr1);
