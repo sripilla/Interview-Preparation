@@ -25,7 +25,18 @@ Constraints:
 1 <= prices.length <= 105
 0 <= prices[i] <= 104
 """
+arr=[]
+m= int(input("Enter the size of the array:"))
 
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        
+print(f"Enter {m} elements of the first array:")
+for i in range(m):
+    arr.append(int(input()))
+mp=0
+
+for i in range(m-1):
+    for j in range(i+1, m):
+        if i<j:
+            p= arr[j]- arr[i]
+            if p>mp:
+                mp=p
+print("Maximum profit:", mp)
