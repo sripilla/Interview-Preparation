@@ -47,6 +47,19 @@ Constraints:
 0 <= val <= 100
 '''
 
-class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
-    .....
+
+arr1=[]
+
+m= int(input("Enter the size of the array:"))
+
+print(f"Enter {m} elements of the first array:")
+for i in range(m):
+    arr1.append(int(input()))
+
+val= int(input("Enter the value to be removed:"))
+
+for i in range(m):
+    if arr1[i]==val:
+        arr1[i]="_"
+
+print("array:", arr1);
