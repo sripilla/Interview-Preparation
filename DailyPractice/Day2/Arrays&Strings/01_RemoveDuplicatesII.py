@@ -47,6 +47,27 @@ Constraints:
 nums is sorted in non-decreasing order.
 """
 
-class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
-    
+def removeDuplicates(nums):
+    k = 0
+
+    for i in range(len(nums)):
+        if k < 2 or nums[i] != nums[k - 2]:
+            nums[k] = nums[i]
+            k += 1
+
+    return k
+
+
+n = int(input("Enter the size of the array: "))
+
+nums = []
+
+print("Enter the elements:")
+
+for i in range(n):
+    nums.append(int(input()))
+
+k = removeDuplicates(nums)
+
+print("k =", k)
+print("Result:", nums[:k])
