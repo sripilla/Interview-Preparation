@@ -36,8 +36,30 @@ Try to come up with as many solutions as you can. There are at least three diffe
 Could you do it in-place with O(1) extra space?
 """
 
-class Solution:
-    def rotate(self, nums: list[int], k: int) -> None:
+def rotate(nums,k):
+    nor=[]
+    rot=[]
+    for i in range(len(nums)):
+        if i>=n-k:
+            rot.append(nums[i])
+        else:
+            nor.append(nums[i])
+    nums[:] = rot + nor
+
+
+n = int(input("Enter the size of the array: "))
+
+nums = []
+
+print("Enter the elements:")
+
+for i in range(n):
+    nums.append(int(input()))
+
+k = int(input("Enter the rotaote key:"))
+rotate(nums, k)
+
+print("Result:", nums)
         """
         Do not return anything, modify nums in-place instead.
         """
