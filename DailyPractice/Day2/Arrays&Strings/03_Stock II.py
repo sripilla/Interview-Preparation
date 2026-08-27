@@ -35,6 +35,26 @@ Constraints:
 0 <= prices[i] <= 104
 """
 
-class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        
+def maxProfit(prices):
+
+    profit = 0
+
+    for i in range(1, len(prices)):
+        if prices[i] > prices[i - 1]:
+            profit += prices[i] - prices[i - 1]
+
+    return profit
+
+
+n = int(input("Enter the size of the array: "))
+
+prices = []
+
+print("Enter the elements:")
+
+for i in range(n):
+    prices.append(int(input()))
+
+result = maxProfit(prices)
+
+print("Maximum Profit:", result)
