@@ -16,14 +16,18 @@ Output:
 6
 """
 
-class Solution:
-    def maxSubArray(self, nums: list[int]) -> int:
-        # Initialize current sum and maximum sum
-        
-        # Traverse the array
-        
-        # Decide whether to extend or restart subarray
-        
-        # Update maximum
-        
-        pass
+def maxsum(arr):
+    maxsum=arr[0]
+    currentsum=arr[0]
+    for i in range(len(arr)):
+        currentsum= max(arr[i], currentsum+arr[i])
+        if currentsum>maxsum:
+            maxsum=currentsum
+    return maxsum
+
+arr = []
+n = int(input("Enter the size of the array: "))
+print(f"Enter {n} elements:")
+for i in range(n):
+    arr.append(int(input()))
+print("maximum sum:", maxsum(arr))
