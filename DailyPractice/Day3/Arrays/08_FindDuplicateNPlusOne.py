@@ -15,15 +15,18 @@ Output:
 
 2
 """
+def frequency(arr):
+    freq = {}
+    for i in range(len(arr)):
+        if arr[i] in freq:
+            freq[arr[i]] += 1
+        else:
+            freq[arr[i]] = 1
+    return freq
 
-class Solution:
-    def findDuplicate(self, nums: list[int]) -> int:
-        # Approach 1: Floyd's Cycle Detection
-        
-        # slow and fast pointers
-        
-        # Find the intersection point
-        
-        # Find the duplicate
-        
-        pass
+arr = []
+n = int(input("Enter the size of the array: "))
+print(f"Enter {n} elements:")
+for i in range(n):
+    arr.append(int(input()))
+print("Frequency:", frequency(arr))
