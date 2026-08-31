@@ -16,10 +16,24 @@ Output:
 [1, 2, 3, 4]
 """
 
-class Solution:
-    def removeDuplicates(self, nums: list[int]) -> list[int]:
-        # Use a set / hash-based approach
-        
-        # Preserve required order
-        
-        pass
+def removedup(arr, n):
+
+    newarr = []
+
+    for i in range(n):
+        if arr[i] not in newarr:
+            newarr.append(arr[i])
+
+    return newarr
+
+
+arr = []
+
+n = int(input("Enter the size of the array: "))
+
+print(f"Enter {n} elements:")
+
+for i in range(n):
+    arr.append(int(input()))
+
+print("Array after removing duplicates:", removedup(arr, n))
