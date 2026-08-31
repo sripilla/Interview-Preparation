@@ -63,6 +63,15 @@ Constraints:
  * @param {number} init
  * @return {number}
  */
-var reduce = function(nums, fn, init) {
-    
-};
+// here i didnt use reduce as its confusing..
+var sumsquare= function(arr){     
+    let sum=0; 
+    let square=0;    
+    for(let i=0; i<arr.length; i++){ 
+        sum+=arr[i];      
+        square+=arr[i]*arr[i];    
+    }     
+    return [sum, square];
+
+}; 
+console.log(sumsquare([4, 5, 10, 30, 20]))

@@ -49,6 +49,29 @@ Constraints:
  * @param {Function} fn
  * @return {number[]}
  */
-var filter = function(arr, fn) {
-    
+var filter= function(arr, fn){
+    let result=[];
+    for(let i=0; i<arr.length; i++){
+        if (fn(arr[i], i)) {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+
 };
+var transform= function(n){
+    if (n>=10){
+        return n;
+    }
+};
+var plusone= function(n){
+    return n+1;
+};
+
+var initialindex= function(n, i){
+    return i===0;
+};
+
+console.log(filter([4, 5, 10, 30, 20], transform));
+console.log(filter([4, 5, 10, 30, 20], plusone));
+console.log(filter([4, 5, 10, 30, 20], initialindex));
