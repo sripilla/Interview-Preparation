@@ -15,18 +15,19 @@ Output:
 
 2
 """
-def frequency(arr):
-    freq = {}
-    for i in range(len(arr)):
-        if arr[i] in freq:
-            freq[arr[i]] += 1
-        else:
-            freq[arr[i]] = 1
-    return freq
+def dup(arr, n):
+    dup=[]
+    n;
+    for i in range(n):
+        for j in range(i+1, n):
+            if arr[i]==arr[j]:
+                dup.append(arr[j])
+    return dup
 
 arr = []
 n = int(input("Enter the size of the array: "))
 print(f"Enter {n} elements:")
 for i in range(n):
     arr.append(int(input()))
-print("Frequency:", frequency(arr))
+print("duplicate elements:", dup(arr, n))
+
