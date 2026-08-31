@@ -16,13 +16,13 @@ Output:
 [1, 2, 3, 5, 8]
 
 """
+def sort(arr):
+    arr.sort()
+    return arr
+arr = []
+n = int(input("Enter the size of the array: "))
+print(f"Enter {n} elements:")
+for i in range(n):
+    arr.append(int(input()))
 
-class Solution:
-    def sortArray(self, nums: list[int]) -> list[int]:
-        # Built-in approach:
-        # sorted(nums)
-
-        # Also know one manual sorting technique
-        # such as Bubble Sort / Selection Sort
-
-        pass
+print("sorted array:", sort(arr))
