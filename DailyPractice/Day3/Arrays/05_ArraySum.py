@@ -16,12 +16,15 @@ Output:
 15
 """
 
-class Solution:
-    def arraySum(self, nums: list[int]) -> int:
-        # Initialize sum
-        
-        # Traverse the array
-        
-        # Add each element
-        
-        pass
+def sum(arr):
+    sum=0;
+    for i in range(len(arr)):
+        sum+=arr[i]
+    return sum;
+arr = []
+n = int(input("Enter the size of the array: "))
+print(f"Enter {n} elements:")
+for i in range(n):
+    arr.append(int(input()))
+
+print("sum of array:", sum(arr))
