@@ -15,13 +15,18 @@ Output:
 
 {1: 3, 2: 2, 3: 1}
 """
+def frequency(arr):
+    freq = {}
+    for i in range(len(arr)):
+        if arr[i] in freq:
+            freq[arr[i]] += 1
+        else:
+            freq[arr[i]] = 1
+    return freq
 
-from collections import Counter
-
-class Solution:
-    def frequency(self, nums: list[int]) -> dict:
-        # Use Counter
-        
-        # Count frequency of each element
-        
-        pass
+arr = []
+n = int(input("Enter the size of the array: "))
+print(f"Enter {n} elements:")
+for i in range(n):
+    arr.append(int(input()))
+print("Frequency:", frequency(arr))
