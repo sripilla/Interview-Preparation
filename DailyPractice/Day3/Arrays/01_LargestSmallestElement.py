@@ -17,12 +17,23 @@ Largest = 9
 Smallest = 1
 """
 
-class Solution:
-    def findMinMax(self, nums: list[int]) -> tuple[int, int]:
-        # Initialize minimum and maximum
-        
-        # Traverse the array
-        
-        # Update minimum and maximum
-        
-        pass
+def maxElement(arr):
+    
+    maxelement=arr[0];
+    for i in range(len(arr)):
+        if arr[i]>maxelement:
+            maxelement= arr[i];
+    return maxelement;
+
+
+arr = []
+
+n = int(input("Enter the number of elements: "))
+
+print("Enter the array:")
+
+for i in range(n):
+    arr.append(int(input()))
+
+print("Maximum element:", maxElement(arr))
+
