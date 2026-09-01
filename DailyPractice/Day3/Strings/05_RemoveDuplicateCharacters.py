@@ -18,10 +18,13 @@ Output:
 
 def removedup(s):
     for i in range(len(s)-1):
-        for j in range(i+1, len(s)):
-            if s[i]==s[j]:
+        j = i + 1
+        while j < len(s):
+            if s[i] == s[j]:
                 s.pop(j)
-                break;
+            else:
+                j += 1
+
     return s
 
 s=[]
@@ -31,3 +34,7 @@ for i in range(n):
     s.append(input())
 
 print("string after removing duplicates:", removedup(s))
+
+
+
+      
