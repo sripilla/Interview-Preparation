@@ -16,18 +16,25 @@ Output:
 Vowels = 3
 Consonants = 7
 """
-class Solution:
-    def countVowelsConsonants(self, s: str):
-        vowels = 0
-        consonants = 0
-        
-        # Check every character
-        
-        for ch in s:
-            # Check whether character is alphabet
-            
-            # Check vowel or consonant
-            
-            pass
-        
-        return vowels, consonants
+def count(s):
+    vcount=0;
+    ccount=0;
+    for i in range(len(s)):
+        if s[i] == 'a' or s[i] =='e' or s[i] =='i' or s[i] =='o' or s[i] =='u':
+            vcount+=1;
+        else:
+            ccount+=1;
+    print("Vowel count:", vcount);
+    print("Consonent count:", ccount)
+    
+s=[]
+n= int(input("Enter the size of the string:"))
+print(f"Enter {n} string elements:")
+for i in range(n):
+    s.append(input())
+count(s)
+
+
+
+
+      
