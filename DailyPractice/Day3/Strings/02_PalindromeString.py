@@ -14,14 +14,24 @@ s = "madam"
 Output:
 
 True
-"""
-class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        # Use two pointers
-        
-        left = 0
-        right = len(s) - 1
-        
-        # Compare characters from both ends
-        
-        pass
+
+
+def rev(s):
+    start=0;
+    end=len(s)-1
+    r=[]
+    while start<=end:
+        r.append(s[end])   
+        end-=1
+    return r
+
+s=[]
+n= int(input("Enter the size of the string:"))
+print(f"Enter the string elements:")
+for i in range(n):
+    s.append(input())
+if s==rev(s):
+    print("palindrome")
+else:
+    print("Not palindrome")
+print("Reverse of the string:", rev(s))
