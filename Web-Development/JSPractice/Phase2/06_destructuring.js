@@ -55,10 +55,10 @@ const student1 = {
     age1: 21
 };
 
-const { age1, name1 } = student;
+const { age1, name1 } = student1;
 
-console.log(age);  // 21
-console.log(name); // Likitha
+console.log(age1);  // 21
+console.log(name1); // Likitha
 
 
 
@@ -84,6 +84,6 @@ const student3 = {
 
 const {
     address: { city }
-} = student;
+} = student3;
 
 console.log(city); // Manipal
