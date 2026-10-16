@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title displayed in the browser tab -->
+    <title>DOM Practice</title>
+
+    <!-- CSS styles for our webpage -->
+    <style>
+        /* Style the main heading */
+        h1 {
+            color: navy;
+        }
+
+        /* Style paragraphs with the message class */
+        .message {
+            color: green;
+        }
+
+        /* A CSS class that JavaScript can apply */
+        .highlight {
+            background-color: yellow;
+            color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. DOM: HTML elements that the browser represents in the DOM -->
+    <h1 id="title">Hello World!</h1>
+
+    <!-- 2. Elements identified by their class -->
+    <p class="message">Welcome to JavaScript.</p>
+    <p class="message">We are learning the DOM.</p>
+
+    <!-- An element whose text JavaScript will read and change -->
+    <p id="description">This is the original description.</p>
+
+    <!-- Container where JavaScript will add a new paragraph -->
+    <div id="output"></div>
+
+    <!-- Connect the external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<!-- Form Handling and Validation-->
+<html lang="en">
+<head>
+    <!-- Defines the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title displayed in the browser tab -->
+    <title>Student Registration</title>
+
+    <!-- Styles for the webpage -->
+    <style>
+        /* Style the main heading */
+        h1 {
+            color: navy;
+        }
+
+        /* Style the form */
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+
+        /* Style the input fields */
+        input {
+            display: block;
+            width: 95%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        /* Style the submit button */
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        /* Style the result message */
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main heading -->
+    <h1>Student Registration</h1>
+
+    <!-- Form containing the student details -->
+    <form id="studentForm">
+
+        <!-- Input for the student's name -->
+        <input
+            id="studentName"
+            type="text"
+            placeholder="Enter your name"
+        >
+
+        <!-- Input for the student's email -->
+        <input
+            id="studentEmail"
+            type="email"
+            placeholder="Enter your email"
+        >
+
+        <!-- Button to submit the form -->
+        <button type="submit">Register</button>
+
+    </form>
+
+    <!-- Displays validation results -->
+    <p id="result"></p>
+
+    <!-- Connect the external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
