@@ -7,8 +7,8 @@ const result = document.getElementById("result");
 // 2. Handle form submission
 form.addEventListener("submit", function (event) {
   event.preventDefault();               // stop page reload
-  console.log(event.type);
-  console.log(event.target);
+  //console.log(event.type);
+  //console.log(event.target);
 
   // 3. Read values (trim removes extra spaces)
   const name = nameInput.value.trim();
