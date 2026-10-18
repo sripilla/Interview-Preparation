@@ -1,57 +1,18 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <!-- Defines the character encoding -->
-    <meta charset="UTF-8">
-
-    <!-- Makes the webpage responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Title displayed in the browser tab -->
-    <title>JavaScript Events Practice</title>
-
-    <!-- Styles the webpage -->
-    <style>
-        /* Style the main heading */
-        h1 {
-            color: navy;
-        }
-
-        /* Style the message paragraph */
-        #message {
-            color: green;
-            font-size: 18px;
-        }
-
-        /* Style the buttons */
-        button {
-            padding: 10px 15px;
-            margin: 5px;
-            cursor: pointer;
-        }
-    </style>
+  <title>Event Listeners Practice</title>
 </head>
-
 <body>
 
-    <!-- Main heading -->
-    <h1 id="title">Student Greeting</h1>
+  <h1 id="title">Student Greeting</h1>
 
-    <!-- Input where the user enters their name -->
-    <input id="studentName" type="text" placeholder="Enter your name">
+  <input id="nameInput" placeholder="Enter your name">
+  <button id="greetBtn">Greet Me</button>
+  <button id="clearBtn">Clear</button>
 
-    <!-- Button that triggers a click event -->
-    <button id="greetButton">Greet Me</button>
+  <p id="message">Your greeting will appear here.</p>
 
-    <!-- Button that clears the message -->
-    <button id="clearButton">Clear Message</button>
-
-    <!-- JavaScript will display messages here -->
-    <p id="message">Your greeting will appear here.</p>
-
-    <!-- Connects the external JavaScript file -->
-    <script src="script.js"></script>
-
+  <script src="lesson4.js"></script>
 </body>
 </html>
