@@ -1,44 +1,32 @@
-
-const fetchButton = document.getElementById("fetchButton");
+// 1. Select elements
+const fetchBtn = document.getElementById("fetchBtn");
 const status = document.getElementById("status");
-const postContainer = document.getElementById("postContainer");
+const title = document.getElementById("title");
+const body = document.getElementById("body");
+
+// Try "/posts/invalid-id" to test the HTTP error
+const url = "https://jsonplaceholder.typicode.com/posts/1";
 
 async function fetchPost() {
-    // Prevent repeated clicks while loading
-    fetchButton.disabled = true;
+  // 2. Loading state
+  fetchBtn.disabled = true;
+  status.textContent = "Loading...";
+  title.textContent = "";
+  body.textContent = "";
 
-    // Show loading message
-    status.textContent = "Loading post...";
-    postContainer.textContent = "";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Could not load the post.");  // 3. HTTP error
 
-    try {
-        const response = await fetch(
-            "https://jsonplaceholder.typicode.com/posts/1"
-        );
-
-        // fetch does not automatically reject HTTP errors
-        if (!response.ok) {
-            throw new Error("Could not load the post.");
-        }
-
-        const data = await response.json();
-
-        const title = document.createElement("h2");
-        title.textContent = data.title;
-
-        const body = document.createElement("p");
-        body.textContent = data.body;
-
-        postContainer.appendChild(title);
-        postContainer.appendChild(body);
-
-        status.textContent = "Post loaded successfully!";
-    } catch (error) {
-        status.textContent = "Error: " + error.message;
-    } finally {
-        // Runs after success or failure
-        fetchButton.disabled = false;
-    }
+    const data = await response.json();
+    title.textContent = data.title;
+    body.textContent = data.body;
+    status.textContent = "Post loaded!";               // 4. Success
+  } catch (error) {
+    status.textContent = "Error: " + error.message;    // 5. Error
+  } finally {
+    fetchBtn.disabled = false;                         // 6. Cleanup: always runs
+  }
 }
 
-fetchButton.addEventListener("click", fetchPost);
+fetchBtn.addEventListener("click", fetchPost);

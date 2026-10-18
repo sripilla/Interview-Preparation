@@ -1,53 +1,49 @@
-
-const fetchButton = document.getElementById("fetchButton");
+// 1. Select elements
+const fetchBtn = document.getElementById("fetchBtn");
 const status = document.getElementById("status");
-const postContainer = document.getElementById("postContainer");
+const postsDiv = document.getElementById("posts");
+
+const base = "https://jsonplaceholder.typicode.com/posts/";
 
 async function fetchPosts() {
-    fetchButton.disabled = true;
-    status.textContent = "Loading posts...";
-    postContainer.textContent = "";
+  fetchBtn.disabled = true;
+  status.textContent = "Loading...";
+  postsDiv.textContent = "";
 
-    try {
-        // Start all three requests
-        const responses = await Promise.all([
-            fetch("https://jsonplaceholder.typicode.com/posts/1"),
-            fetch("https://jsonplaceholder.typicode.com/posts/2"),
-            fetch("https://jsonplaceholder.typicode.com/posts/3")
-        ]);
+  try {
+    // 2. Start all 3 requests together
+    const responses = await Promise.all([
+      fetch(base + "1"),
+      fetch(base + "2"),
+      fetch(base + "3")
+    ]);
 
-        // Check that every HTTP response succeeded
-        for (const response of responses) {
-            if (!response.ok) {
-                throw new Error("Failed to fetch one or more posts.");
-            }
-        }
-
-        // Parse all three response bodies
-        const posts = await Promise.all(
-            responses.map(response => response.json())
-        );
-
-        // Display each post
-        posts.forEach(post => {
-            const card = document.createElement("div");
-            const title = document.createElement("h2");
-            const body = document.createElement("p");
-
-            title.textContent = post.title;
-            body.textContent = post.body;
-
-            card.appendChild(title);
-            card.appendChild(body);
-            postContainer.appendChild(card);
-        });
-
-        status.textContent = "All posts loaded successfully!";
-    } catch (error) {
-        status.textContent = "Error: " + error.message;
-    } finally {
-        fetchButton.disabled = false;
+    // 3. Check every response
+    for (const response of responses) {
+      if (!response.ok) throw new Error("Failed to fetch one or more posts.");
     }
+
+    // 4. Parse all bodies together
+    const posts = await Promise.all(responses.map((r) => r.json()));
+
+    // 5. Display each post
+    posts.forEach((post) => {
+      const title = document.createElement("h3");
+      title.textContent = post.title;
+
+      const body = document.createElement("p");
+      body.textContent = post.body;
+
+      postsDiv.appendChild(title);
+      postsDiv.appendChild(body);
+    });
+
+    status.textContent = "All posts loaded!";
+  } catch (error) {
+    status.textContent = "Error: " + error.message;   // any one fails, so all fail
+  } finally {
+    fetchBtn.disabled = false;
+  }
 }
 
-fetchButton.addEventListener("click", fetchPosts);
+fetchBtn.addEventListener("click", fetchPosts);

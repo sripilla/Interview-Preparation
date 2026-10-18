@@ -1,52 +1,26 @@
-
-const fetchButton = document.getElementById("fetchButton");
+// 1. Select elements
+const fetchBtn = document.getElementById("fetchBtn");
 const status = document.getElementById("status");
-const postContainer = document.getElementById("postContainer");
+const title = document.getElementById("title");
+const body = document.getElementById("body");
 
+// 2. An async function: reads top to bottom
 async function fetchPost() {
-    try {
-        // Show loading message
-        status.textContent = "Loading post...";
-        postContainer.innerHTML = "";
+  try {
+    status.textContent = "Loading...";
 
-        // Fetch data from the API
-        const response = await fetch(
-            "https://jsonplaceholder.typicode.com/posts/1"
-        );
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");  // wait for response
+    if (!response.ok) throw new Error("Failed to fetch post");                    // HTTP error check
 
-        // Check whether the request succeeded
-        if (!response.ok) {
-            throw new Error("Failed to fetch post");
-        }
+    const data = await response.json();   // wait for parsed data
 
-        // Convert the response into a JavaScript object
-        const data = await response.json();
-
-        // Display the post title
-        const title = document.createElement("h2");
-        title.textContent = data.title;
-
-        // Display the post body
-        const body = document.createElement("p");
-        body.textContent = data.body;
-
-        // Display the user ID
-        const userId = document.createElement("p");
-        userId.textContent = "User ID: " + data.userId;
-
-        postContainer.appendChild(title);
-        postContainer.appendChild(body);
-        postContainer.appendChild(userId);
-
-        status.textContent = "Post loaded successfully!";
-    } catch (error) {
-        // Handle errors
-        status.textContent = "Error: " + error.message;
-    } finally {
-        // Runs whether the request succeeds or fails
-        console.log("Fetch operation completed.");
-    }
+    title.textContent = data.title;
+    body.textContent = data.body;
+    status.textContent = "Post loaded!";
+  } catch (error) {
+    status.textContent = "Error: " + error.message;   // 3. errors land here
+  }
 }
 
-// Run the function when the button is clicked
-fetchButton.addEventListener("click", fetchPost);
+// 4. Pass the function as a callback (no brackets)
+fetchBtn.addEventListener("click", fetchPost);
