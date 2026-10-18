@@ -1,27 +1,21 @@
-
-const marks1Input = document.getElementById("marks1");
-const marks2Input = document.getElementById("marks2");
-const calculateButton = document.getElementById("calculateButton");
+// 1. Select elements
+const marks1 = document.getElementById("marks1");
+const marks2 = document.getElementById("marks2");
+const calcBtn = document.getElementById("calcBtn");
 const result = document.getElementById("result");
 
-// This function adds the marks and passes the total to a callback
-function calculateMarks(mark1, mark2, callback) {
-    const total = mark1 + mark2;
-
-    // Execute the callback and pass it the total
-    callback(total);
+// 2. A function that takes a callback
+function calculateMarks(a, b, callback) {
+  const total = a + b;
+  callback(total);              // hand the result to the callback
 }
 
-// This callback displays the total on the webpage
-function displayResult(total) {
-    result.textContent = "Total Marks: " + total;
+// 3. The callback: decides what to do with the result
+function showTotal(total) {
+  result.textContent = "Total Marks: " + total;
 }
 
-// Listen for a button click
-calculateButton.addEventListener("click", function () {
-    const mark1 = Number(marks1Input.value);
-    const mark2 = Number(marks2Input.value);
-
-    // Pass displayResult as a callback
-    calculateMarks(mark1, mark2, displayResult);
+// 4. The click handler is also a callback (the browser calls it)
+calcBtn.addEventListener("click", () => {
+  calculateMarks(Number(marks1.value), Number(marks2.value), showTotal);  // no () on showTotal
 });

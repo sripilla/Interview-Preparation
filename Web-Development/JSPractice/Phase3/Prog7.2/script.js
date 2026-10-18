@@ -1,52 +1,34 @@
+// 1. Select elements
+const loadBtn = document.getElementById("loadBtn");
+const status = document.getElementById("status");
+const postsDiv = document.getElementById("posts");
 
-const loadButton = document.getElementById("loadButton");
-const statusMessage = document.getElementById("status");
-const postsContainer = document.getElementById("postsContainer");
+loadBtn.addEventListener("click", () => {
+  status.textContent = "Loading...";
+  postsDiv.textContent = "";
 
-loadButton.addEventListener("click", function () {
-    statusMessage.textContent = "Loading posts...";
-    postsContainer.textContent = "";
-    loadButton.disabled = true;
+  // 2. Request 5 posts (?_limit=5 asks the API for only 5)
+  fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+    .then((response) => response.json())
 
-    // Request the first 10 posts
-    fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
-        .then(function (response) {
-            if (!response.ok) {
-                throw new Error("Failed to load posts");
-            }
+    // 3. The data is an ARRAY of post objects, so loop through it
+    .then((posts) => {
+      posts.forEach((post) => {
+        const title = document.createElement("h3");
+        title.textContent = post.title;
 
-            return response.json();
-        })
-        .then(function (posts) {
-            // The API returns an array of post objects
-            posts.forEach(function (post) {
-                // Create a container for each post
-                const postElement = document.createElement("div");
-                postElement.classList.add("post");
+        const body = document.createElement("p");
+        body.textContent = post.body;
 
-                // Create the title
-                const title = document.createElement("h2");
-                title.textContent = post.title;
+        postsDiv.appendChild(title);
+        postsDiv.appendChild(body);
+      });
 
-                // Create the content
-                const body = document.createElement("p");
-                body.textContent = post.body;
+      status.textContent = "Loaded " + posts.length + " posts!";
+    })
 
-                // Add title and content to the post
-                postElement.appendChild(title);
-                postElement.appendChild(body);
-
-                // Add the post to the webpage
-                postsContainer.appendChild(postElement);
-            });
-
-            statusMessage.textContent =
-                "Loaded " + posts.length + " posts successfully!";
-        })
-        .catch(function (error) {
-            statusMessage.textContent = "Error: " + error.message;
-        })
-        .finally(function () {
-            loadButton.disabled = false;
-        });
+    // 4. Handle network errors
+    .catch((error) => {
+      status.textContent = "Error: " + error.message;
+    });
 });

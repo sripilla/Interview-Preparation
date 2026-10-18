@@ -1,38 +1,27 @@
+// 1. Select elements
+const orderBtn = document.getElementById("orderBtn");
+const status = document.getElementById("status");
 
-const orderButton = document.getElementById("orderButton");
-const statusMessage = document.getElementById("status");
-
-// Create a function that returns a Promise
+// 2. Create a Promise that finishes after 2 seconds
 function placeOrder() {
-    return new Promise(function (resolve, reject) {
-        statusMessage.textContent = "Preparing your order...";
+  return new Promise((resolve, reject) => {
+    const success = true;               // change to false to test .catch()
 
-        // Simulate an operation that takes 2 seconds
-        setTimeout(function () {
-            const success = true;
-
-            if (success) {
-                resolve("Your order is ready!");
-            } else {
-                reject("Sorry, your order failed.");
-            }
-        }, 2000);
-    });
+    setTimeout(() => {
+      if (success) {
+        resolve("Your food is ready!");    // fulfilled
+      } else {
+        reject("Sorry, your order failed."); // rejected
+      }
+    }, 2000);
+  });
 }
 
-// Run when the user clicks the button
-orderButton.addEventListener("click", function () {
-    orderButton.disabled = true;
+// 3. Use the Promise with .then() and .catch()
+orderBtn.addEventListener("click", () => {
+  status.textContent = "Preparing your order...";   // pending
 
-    placeOrder()
-        .then(function (message) {
-            statusMessage.textContent = message;
-        })
-        .catch(function (error) {
-            statusMessage.textContent = error;
-        })
-        .finally(function () {
-            // Runs whether the Promise succeeds or fails
-            orderButton.disabled = false;
-        });
+  placeOrder()
+    .then((message) => status.textContent = message)
+    .catch((error) => status.textContent = error);
 });

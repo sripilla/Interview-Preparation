@@ -1,51 +1,38 @@
-
-const registerButton = document.getElementById("registerButton");
+// 1. Select elements
+const registerBtn = document.getElementById("registerBtn");
 const output = document.getElementById("output");
 
-// Step 1: Register the student
+// Helper: add a line of text to the page
+function show(text) {
+  const p = document.createElement("p");
+  p.textContent = text;
+  output.appendChild(p);
+}
+
+// 2. A Promise that resolves after 1 second
 function registerStudent() {
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve("Student registered successfully!");
-        }, 1000);
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Student registered"), 1000);
+  });
+}
+
+// 3. The chain: each return passes data to the next .then()
+registerBtn.addEventListener("click", () => {
+  output.textContent = "";
+
+  registerStudent()
+    .then((msg) => {
+      show(msg);                        // Student registered
+      return "STU101";                  // passed to next .then()
+    })
+    .then((id) => {
+      show("Student ID: " + id);        // Student ID: STU101
+      return "Registration completed";
+    })
+    .then((msg) => {
+      show(msg);                        // Registration completed
+    })
+    .catch((error) => {
+      show("Error: " + error.message);  // runs only if a step throws
     });
-}
-
-// Step 2: Generate a student ID
-function generateStudentId(message) {
-    output.textContent += message + "\n";
-
-    return new Promise(function (resolve) {
-        setTimeout(function () {
-            resolve("STU102");
-        }, 1000);
-    });
-}
-
-// Step 3: Display the final confirmation
-function showConfirmation(studentId) {
-    output.textContent += "Student ID: " + studentId + "\n";
-    output.textContent += "Registration completed!";
-}
-
-registerButton.addEventListener("click", function () {
-    output.textContent = "Starting registration...\n";
-    registerButton.disabled = true;
-
-    registerStudent()
-        .then(function (message) {
-            output.textContent += message + "\n";
-
-            // Pass the registration message to the next step
-            return generateStudentId("Generating student ID...");
-        })
-        .then(function (studentId) {
-            showConfirmation(studentId);
-        })
-        .catch(function (error) {
-            output.textContent += "Error: " + error.message;
-        })
-        .finally(function () {
-            registerButton.disabled = false;
-        });
 });
